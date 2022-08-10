@@ -1,0 +1,111 @@
+body{
+  background-color: fefefe;
+  font-size: 17px;
+  font-family: 'Arima', cursive;
+  margin-bottom: 0;
+}
+h1{
+  font-family: 'Arima', cursive;
+  color: 000000;
+  font-weight: lighter;
+  font-weight: bolder;
+  font-size: 40px;
+}
+h2 {
+  font-family: 'Arima', cursive;
+  color: 111111;
+  font-weight: lighter;
+  font-size: 26px;
+}
+
+p {
+  font-family: 'Arima', cursive;
+  color: 111111;
+}
+
+.profile-picture {
+  box-shadow: 10px 10px 10px rgba(200, 200, 200, 1);
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.profile-picture-and-name {
+  background-color:aliceblue;
+  box-shadow: 10px 10px 10px rgba(200, 200, 200, 1);
+}
+
+.description-about-me {
+  background-color:aliceblue;
+  box-shadow: 10px 10px 10px rgba(200, 200, 200, 1);
+  vertical-align: top;
+}
+
+.description-about-me {
+  background-color:aliceblue;
+  box-shadow: 10px 10px 10px rgba(200, 200, 200, 1);
+}
+
+.gitstats {
+  background-color:aliceblue;
+  box-shadow: 10px 10px 10px rgba(200, 200, 200, 1);
+}
+
+.gitstats2 {
+  background-color:aliceblue;
+  box-shadow: 10px 10px 10px rgba(200, 200, 200, 1);
+}
+
+/* .my-hobbies {
+  background-color:aliceblue;
+  box-shadow: 10px 10px 10px rgba(200, 200, 200, 1);
+} */
+
+.my-social-skills {
+  vertical-align:top;
+}
+
+.contact {
+  background-color:aliceblue;
+  box-shadow: 10px 10px 10px rgba(200, 200, 200, 1);
+}
+
+.profile-picture-and-name img {
+  border-radius: 50%;
+}
+
+.profile-picture-and-name h1 {
+  line-height: 50px;
+}
+
+.profile-picture-and-name h2 {
+  line-height: 40px;
+}
+.table-spacer {
+  color: rgba(256, 256, 256, 0)
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
+
+#phone {
+  backdrop-filter: blur(6px);
+}
