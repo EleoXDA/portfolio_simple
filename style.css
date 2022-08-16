@@ -1,7 +1,7 @@
 body{
   background-color: eeeeee;
   font-size: 17px;
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 h1{
   font-family: 'Arima', cursive;
@@ -9,15 +9,11 @@ h1{
 }
 h2 {
   font-family: 'Arima', cursive;
-  /* color: 111111;
-  font-weight: lighter; */
   font-size: 10px;
 }
 
 h3 {
   font-family: 'Arima', cursive;
-  /* color: 111111;
-  font-weight: lighter; */
   font-size: 18px;
 }
 
@@ -28,7 +24,6 @@ h4 {
 p,ul {
   font-family: 'Bree Serif', serif;
   font-size: 15px;
-  /* color: 111111; */
 }
 
 .profile-picture {
