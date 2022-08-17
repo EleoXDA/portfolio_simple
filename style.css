@@ -1,7 +1,7 @@
 body{
   background-color: eeeeee;
   font-size: 17px;
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 h1{
   font-family: 'Arima', cursive;
@@ -9,11 +9,15 @@ h1{
 }
 h2 {
   font-family: 'Arima', cursive;
+  /* color: 111111;
+  font-weight: lighter; */
   font-size: 10px;
 }
 
-h3 {
+h3, h4, h5, h6 {
   font-family: 'Arima', cursive;
+  /* color: 111111;
+  font-weight: lighter; */
   font-size: 18px;
 }
 
@@ -24,6 +28,7 @@ h4 {
 p,ul {
   font-family: 'Bree Serif', serif;
   font-size: 15px;
+  /* color: 111111; */
 }
 
 .profile-picture {
@@ -32,4 +37,33 @@ p,ul {
 
 .display-6 {
   font-size: 15px;
+}
+
+.fa-code, .fa-github, .fa-stack-overflow, .fa-linkedin-in, .fa-laptop-code {
+  color: darkgray;
+}
+
+.fa-code:hover {
+  color: red;
+  transition: 0.3s;
+}
+
+.fa-github:hover {
+  color: black;
+  transition: 0.3s;
+}
+
+.fa-stack-overflow:hover {
+  color: darkorange;
+  transition: 0.3s;
+}
+
+.fa-linkedin-in:hover {
+  color: blue;
+  transition: 0.3s;
+}
+
+.fa-laptop-code:hover {
+  color: #f59812;
+  transition: 0.3s;
 }
