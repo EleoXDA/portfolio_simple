@@ -39,7 +39,7 @@ p,ul {
   font-size: 15px;
 }
 
-.fa-code, .fa-github, .fa-stack-overflow, .fa-linkedin-in, .fa-laptop-code {
+.fa-code, .fa-github, .fa-stack-overflow, .fa-linkedin-in, .fa-laptop-code, #phone, #mail, #location {
   color: darkgray;
 }
 
@@ -65,5 +65,20 @@ p,ul {
 
 .fa-laptop-code:hover {
   color: #f59812;
+  transition: 0.3s;
+}
+
+#phone:hover {
+  color: #006400;
+  transition: 0.3s;
+}
+
+#mail:hover {
+  color: lightcoral;
+  transition: 0.3s;
+}
+
+#location:hover {
+  color: darkred;
   transition: 0.3s;
 }
