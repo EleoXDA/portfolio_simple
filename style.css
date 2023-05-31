@@ -1,3 +1,20 @@
+.navbar-brand {
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+}
+
+.navbar-brand-muted {
+  font-weight: bold;
+  color: #999999;
+  text-align: center;
+}
+
+body {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
 h1{
   font-family: 'Arima', cursive;
   font-size: 24px;
@@ -27,15 +44,99 @@ p,ul {
   /* color: 111111; */
 }
 
+.top-section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 20px;
+}
+
+.info {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.profile {
+  grid-area: 1 / 1 / 2 / 2;
+  text-align: center;
+}
+
 .profile-picture {
   border-radius: 50%;
 }
 
-.display-6 {
-  font-size: 15px;
+.icon-row {
+  display: flex;
+  justify-content:center;
+  gap: 1px;
 }
 
-.fa-code, .fa-github, .fa-stack-overflow, .fa-linkedin-in, .fa-android, #phone, #mail, #location {
+.contact-me {
+  text-align: center;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon-btn, .Linkedin.btn, .XDA.btn, .google-dev.btn, .stack.btn, .phone, .mail, .location {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.contact-me {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.icon-btn i {
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-me-text {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .top-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .info {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  
+  .profile {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .icon-btn i {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-me {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+.fa-code, .fa-github, .fa-stack-overflow, .fa-linkedin-in, .fa-android, .phone, .mail, .location {
   color: darkgray;
 }
 
