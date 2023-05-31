@@ -41,40 +41,48 @@ p,ul {
 
 .fa-code:hover {
   color: red;
-  transition: 0.3s;
+  transform: scale(1.15);
+  transition: 0.1s;
 }
 
 .fa-github:hover {
   color: black;
-  transition: 0.3s;
+  transform: scale(1.15);
+  transition: 0.1s;
 }
 
 .fa-stack-overflow:hover {
   color: darkorange;
-  transition: 0.3s;
+  transform: scale(1.15);
+  transition: 0.1s;
 }
 
 .fa-linkedin-in:hover {
   color: #0077B7;
-  transition: 0.3s;
+  transform: scale(1.15);
+  transition: 0.1s;
 }
 
 .fa-android:hover {
   color: #f59812;
-  transition: 0.3s;
+  transform: scale(1.15);
+  transition: 0.1s;
 }
 
-#phone:hover {
+.fa-phone:hover {
   color: #006400;
-  transition: 0.3s;
+  transform: scale(1.15);
+  transition: 0.1s;
 }
 
-#mail:hover {
+.fa-envelope-open:hover {
   color: lightcoral;
-  transition: 0.3s;
+  transform: scale(1.15);
+  transition: 0.1s;
 }
 
-#location:hover {
+.fa-map-location-dot:hover {
   color: darkred;
-  transition: 0.3s;
+  transform: scale(1.15);
+  transition: 0.1s;
 }
