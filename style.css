@@ -10,54 +10,109 @@
   text-align: center;
 }
 
+.navbar-shortcuts {
+  text-decoration: none;
+  color:#ffffff;
+}
+
 body {
   background-color: #F2F2F2;
   color: #000000;
 }
 
-h1{
-  font-family: 'Arima', cursive;
-  font-size: 24px;
+button {
+  align-items: center;
+  background-color: #a5a5a5;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  /* cursor: pointer; */
+  display: inline-flex;
+  padding: 10px;
+  margin: 10px;
 }
+
+h1 {
+  font-family: 'Arima', cursive;
+  font-size: 30px;
+}
+
 h2 {
   font-family: 'Arima', cursive;
-  /* color: 111111;
-  font-weight: lighter; */
-  font-size: 10px;
+  font-size: 24px;
 }
 
 h3, h4, h5 {
   font-family: 'Arima', cursive;
-  /* color: 111111;
-  font-weight: lighter; */
   font-size: 18px;
 }
 
 h6 {
   font-family: 'Arima', cursive;
-  font-size: 22px;
+  font-size: 14px;
 }
 
 p,ul {
   font-family: 'Bree Serif', serif;
   font-size: 15px;
-  /* color: 111111; */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.column {
+  flex: 0 0 50%; 
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+.paragraph {
+  margin-top: 1em;
+}
+
+.hobbies {
+  margin: 1em 0;
+}
+
+.spacer {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991.98px) {
+  .column {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .top-section {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-gap: 20px;
 }
 
 .info {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .profile {
-  grid-area: 1 / 1 / 2 / 2;
+  grid-area: 1 / 1;
   text-align: center;
 }
 
@@ -78,7 +133,7 @@ p,ul {
 .contact-row {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 0px;
 }
 
 .icon-btn, .Linkedin.btn, .XDA.btn, .google-dev.btn, .stack.btn, .phone, .mail, .location {
@@ -142,48 +197,57 @@ p,ul {
 
 .fa-code:hover {
   color: red;
-  transform: scale(1.15);
+  transform: scale(1.5);
   transition: 0.1s;
 }
 
 .fa-github:hover {
   color: black;
-  transform: scale(1.15);
+  transform: scale(1.5);
   transition: 0.1s;
 }
 
 .fa-stack-overflow:hover {
   color: darkorange;
-  transform: scale(1.15);
+  transform: scale(1.5);
   transition: 0.1s;
 }
 
 .fa-linkedin-in:hover {
   color: #0077B7;
-  transform: scale(1.15);
+  transform: scale(1.5);
   transition: 0.1s;
 }
 
 .fa-android:hover {
   color: #f59812;
-  transform: scale(1.15);
+  transform: scale(1.5);
   transition: 0.1s;
 }
 
 .fa-phone:hover {
   color: #006400;
-  transform: scale(1.15);
+  transform: scale(1.5);
   transition: 0.1s;
 }
 
 .fa-envelope-open:hover {
   color: lightcoral;
-  transform: scale(1.15);
+  transform: scale(1.5);
   transition: 0.1s;
 }
 
 .fa-map-location-dot:hover {
   color: darkred;
-  transform: scale(1.15);
+  transform: scale(1.5);
   transition: 0.1s;
+}
+
+.content {
+  padding: 20px;
+  display: none;
+}
+
+.active {
+  display: block;
 }

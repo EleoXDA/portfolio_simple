@@ -14,20 +14,19 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" src="images/gh-logo.png" type="image/x-icon"/>
     <title>EleoXDA GitHub Page</title>
-    <meta name="description" content="EleoXDA Github Page - A junior android and cross-platform developer with fullstack skills">
+    <meta name="description" content="EleoXDA Github Page">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <nav class="navbar">
     <h1 class="navbar-brand"><strong>Elbay Malik</strong> <span class="navbar-brand-muted"><i>a.k.a.</i> <strong>EleoXDA</strong></span></h1>
   </nav>
   <body>
-    <!-- NAME, PROFILE PICTURE and CONTACT INFO -->
     <div class="top-section">
       <figure class="profile">
         <img class="profile-picture" src="images/profile.jpg" alt="EleoXDA profile picture" width="200">
       </figure>
       <div class="info">
-        <h6 id="contact-me-text">Find me in:</h6>
+        <h3 id="contact-me-text">Find me in:</h6>
         <div class="icon-row">
           <a class="icon-btn" style="text-decoration: none;" href="https://github.com/EleoXDA" target="_blank">
             <i class="fa-brands fa-github fa-3x"></i>
@@ -46,7 +45,7 @@
           </a>
         </div>
         <div class="contact-me">
-          <h6 id="contact-me-text">Contact me:</h6>
+          <h3 id="contact-me-text">Contact me:</h6>
         </div>
         <div class="contact-row">
           <a class="phone" style="text-decoration: none;" href="mailto:elbay.malik@gmail.com"><i class="fa-solid fa-phone fa-2xl"></i></a>
@@ -55,70 +54,138 @@
         </div>
       </div>
     </div>
-    <!-- ABOUT ME -->
-    <div class="row justify-content-center mb-0 mx-5">
-      <div class="col-12 col-lg-6 mb-0">
-        <div class="mt-3 mb-0">
-          <p>I am a mobile developer (kotlin, flutter,...swift). My journey started on XDA Developers Forum in 2012. 
-            I am advanced in QA and Junior in Android Development. 
-            I have edited several apps and have worked with custom ROM/firmware for several devices. Following that:
-            <ul>
-              <li>I started with simple Bash & XML, and currently expanded my programming knowledge to Kotlin and Flutter. 
-                Expecting to receive Associate Android developer certificate from Google.</li>
-              <li>I also am developing my Front-End side by joining full-time Le Wagon bootcamp on SQL, JavaScript and 
-                RubyOnRails.</li>
-              <li>My next stop is learning Swift for iOS development.</li>
-              <li>I'm looking to expand my collaborations on cross-platform and native mobile development</li>
-            </ul>
-          </p>
+    <div class="navbar-brand" id="navbar">
+      <button><a class="navbar-shortcuts" href="#" onclick="showContent('home')">Home</a></button>
+      <button><a class="navbar-shortcuts" href="#" onclick="showContent('projects')">Projects</a>
+      <button><a class="navbar-shortcuts" href="#" onclick="showContent('experience')">Experience</a>
+      <button><a class="navbar-shortcuts" href="#" onclick="showContent('education')">Education</a>
+      <button><a class="navbar-shortcuts" href="#" onclick="showContent('prlang')">Programming Languages</a>
+      <button><a class="navbar-shortcuts" href="#" onclick="showContent('soft')">Software Proficiencies</a>
+      <button><a class="navbar-shortcuts" href="#" onclick="showContent('test')">Testing Frameworks</a>
+      <button><a class="navbar-shortcuts" href="#" onclick="showContent('agile')">Agile Methodologies</a>
+      <button><a class="navbar-shortcuts" href="#" onclick="showContent('lang')">Language Proficiencies</a>
+    </div>
+    <div class="row">
+      <div id="home" class="column content active">
+        <h2>About Me</h2>
+        <p>Detail-oriented and versatile software developer & tester with a strong background in QA, testing, and development phases of web & mobile applications.</p>
+      </div>
+      <div id="projects" class="column content">
+        <h2>Projects</h2>
+        <div>
+            <h3>Socialize</h3>
+            <p>A website where developers can log in with their GitHub accounts and find each other based on their locations.</p>
+            <a href="https://www.socialize.tech">Visit the Project</a>
+        </div>
+        <div>
+            <h3>DevWork</h3>
+            <p>A platform where developers can ask other developers for help, be it paid or free, depending on due time & complexity.</p>
+            <a href="https://www.devwork.team">Visit the Project</a>
         </div>
       </div>
-      <div class="col-12 col-lg-6 mb-0">
-        <div class="my-hobbies">
-          <p>My hobbies are:
-            <ul>
-              <li>Playing drums live/studio</li>
-              <li>Collecting and giving life to old tech items (laptops/smartphones)</li>
-              <li>Learning new skills every now and then (be it cooking, martial arts or spiritual)</li>
-            </ul></p>
-          <p>In future I envision myself to work in:
-            <ul>
-              <li>Working on a team with a specific goal</li>
-              <li>Large group with supervisors over juniors</li>
-              <li>Weekly or bimonthly reports about current projects and their course</li>
-              <li>Training in specific language or framework that requires more attention at work</li>
-            </ul>
-          </p>
+
+      <div id="experience" class="column content">
+        <h2>Experience</h2>
+        <div>
+          <h3>Junior Cross-Platform Developer at koviko GmbH</h3>
+          <p>Responsible for building a cross-platform app for learning German language using Flutter/Dart and PHP backend with Yii framework.</p>
+        </div>
+        <div>
+          <h3>Junior Developer at XDA-Developers</h3>
+          <p>Worked on Web, Android, and cross-platform app development using Ruby (on Rails), JavaScript, Typescript and Flutter.</p>
+        </div>
+        <div>
+          <h3>Research Assistant/Project Responsible at Friedrich Schiller University of Jena</h3>
+          <p>Increased effectivity of CPU and GPU preparation on silicon chips. Managed project budget for 30 months and increased cost effectivity by 15%. Demonstrated strong writing skills in original correspondence and reports.</p>
+        </div>
+        <div>
+          <h3>Junior Mobile Developer at recruiT</h3>
+          <p>Modified mobile android applications using Kotlin and smali language. Tested applications using JUnit, adapted the app for fur. Prepared, rewrote, and edited parts of apps' user interfaces using UI/UX tools.</p>
+        </div>
+        <div>
+          <h3>MSc. Researcher/Project Responsible at Middle East Technical University</h3>
+          <p>Involved in silicon chip manufacturing and MEMS for automated testing. Validated incoming data to check information accuracy and integrity while locating and correcting concerns. Published research and review papers in peer-reviewed scientific journals.</p>
         </div>
       </div>
-      <!-- GITHUB STATS -->
-      <div class="row justify-content-evenly mt-0 mx-5">
-        <div class="col-12">
-          <img class="img-fluid" src="https://activity-graph.herokuapp.com/graph?username=EleoXDA&bg_color=ffffff&color=000000&line=4c9d9e&point=ff0000&area=true&hide_border=true&hide_title=true">
+      <div id="education" class="column content">
+        <h2>Education</h2>
+        <div>
+          <h3>Le Wagon Coding Bootcamp - Web Development</h3>
+          <p>9-week full-time intensive coding bootcamp learning HTML, CSS, Bootstrap, 
+            <br>JavaScript ES6, SQL, Git, GitHub, Heroku and Ruby on Rails.</p>
         </div>
-        <div class="spacer col-12 col-md-12 d-flex justify-content-center">
-          <h1 class="text-white">.</h1>
+        <div>
+          <h3>Master of Science: Micro and Nanotechnology</h3>
+          <p>Development of silicon chips and MEMS devices for automated testing.</p>
         </div>
-        <div class="col-12 col-md-8 d-flex justify-content-center">
-          <img class="img-fluid d-block w-20" 
-          src="https://github-readme-streak-stats.herokuapp.com/?user=EleoXDA&theme=white">
+        <div>
+          <h3>Bachelor of Science: Biology</h3>
+          <p>Basics of scientific research - introduction to general scientific applications</p>
         </div>
-        <div class="col-12 col-md-4">
-          <img class="img-fluid d-block w-20" 
-          src="https://github-readme-stats.vercel.app/api?username=EleoXDA&count_private=true&show_icons=false&theme=vue&hide_rank=true&include_all_commits=false&hide_title=false">
-        </div>
-        <div class="spacer col-12 col-md-12 d-flex justify-content-center">
-          <h1 class="text-white">.</h1>
-        </div>
-        <div class="col-12 col-md-4">
-          <img class="img-fluid d-block w-70" 
-          src="https://raw.githubusercontent.com/EleoXDA/EleoXDA/main/profile-3d-contrib/pie_lang_only.svg">
-        </div>
-        <div class="col-12 col-md-4">
-          <img class="img-fluid d-block w-20" 
-          src="https://raw.githubusercontent.com/EleoXDA/EleoXDA/main/profile-3d-contrib/radar_contrib_only.svg">
-        </div>
+      </div>
+      <div id="prlang" class="column content">
+        <h2>Programming Languages</h2>
+          <br> - HTML
+          <br> - CSS
+          <br> - JavaScript
+          <br> - Dart,
+          <br> - Ruby, 
+          <br> - TypeScript,
+          <br> - PHP,
+          <br> - Kotlin
+        </p>
+      </div>
+      <div id="soft" class="column content">
+        <h2>Software Proficiencies</h2>
+        <p>
+          <br> - Visual Studio Code, 
+          <br> - Visual Studio, 
+          <br> - IntelliJ IDEA, 
+          <br> - Android Studio, 
+          <br> - Git, 
+          <br> - GitHub, 
+          <br> - GitLab, 
+          <br> - Bitbucket, 
+          <br> - Figma, 
+          <br> - Adobe XD, 
+          <br> - Prototype tools, 
+          <br> - DB Browser, 
+          <br> - SQL, 
+          <br> - SQLite, 
+          <br> - PostgreSQL. 
+        </p>
+      </div>
+      <div id="test" class="column content">
+        <h2>Testing Frameworks</h2>
+        <p>
+          <br> - JesT, 
+          <br> - Jasmine, 
+          <br> - Mocha, 
+          <br> - RSpec, 
+          <br> - Widget Tester, 
+          <br> - JUnit, 
+          <br> - Espresso. 
+        </p>
+      </div>
+      <div id="agile" class="column content">
+        <h2>Agile Methods</h2>
+        <p>
+          <br> - Kanban, 
+          <br> - Jira, 
+          <br> - Scrum.
+        </p>
+      </div>
+      <div id="lang" class="column content">
+        <h2>Language Proficiencies</h2>
+        <p>
+          <br> - English (C1), 
+          <br> - Turkish (Native), 
+          <br> - Azerbaijani (Native), 
+          <br> - Russian (B2), 
+          <br> - German (B1)
+        </p>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
