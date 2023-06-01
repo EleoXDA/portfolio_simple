@@ -57,7 +57,7 @@
         </div>
       </div>
     </div>
-    <div class="navbar-brand" id="navbar">
+    <div class="navbar-brand navigation" id="navbar">
       <button><a class="navbar-shortcuts" href="#" onclick="showContent('home')">Home</a>
       <button><a class="navbar-shortcuts" href="#" onclick="showContent('projects')">Projects</a>
       <button><a class="navbar-shortcuts" href="#" onclick="showContent('experience')">Experience</a>
@@ -71,19 +71,76 @@
     <div class="row">
       <div id="home" class="column content active">
         <h2>About Me</h2>
-        <p>Detail-oriented and versatile software developer & tester with a strong background in QA, testing, and development phases of web & mobile applications.</p>
-      </div>
+        <p>As a detail-oriented and versatile software developer, I have honed my skills in both the development and testing phases of web and mobile applications. With a proven background in QA, my expertise spans across multiple testing frameworks including RSpec, Widget Tester and Jest.
+          <br>My pursuit of knowledge and technical skills led me to Le Wagon Coding Bootcamp, a transformative experience that certified me as a Web Developer. This immersive program introduced me to a variety of programming languages, such as Ruby on Rails, JavaScript, and CSS, effectively preparing me for a dynamic career in the tech industry. Upon completion of the bootcamp, I took up a freelance role as a Junior Developer with XDA-Developers, leveraging my newly acquired skills to develop web, Android, and cross-platform applications.
+          <br>Furthering my career, I embraced the opportunity to work as a Junior Cross-Platform Developer with koviko GmbH. During this tenure, I spearheaded the development of a German language learning app using Flutter/Dart, demonstrating my ability to work with cross-platform mobile frameworks and languages. Additionally, my role involved using the PHP backend with the Yii framework and performing application testing using Widget Tester, ultimately consolidating my experience in project management and software development.
+
+          <br>In summary, my career journey has been characterized by continuous learning, versatility, and a commitment to excellence. With my extensive skills in software development, testing, and project management, I am eager to contribute to a new position as a Software Developer or Tester, where I can continue to ensure the delivery of high-quality software solutions.        </p>
+        </div>
       <div id="projects" class="column content">
         <h2>Projects</h2>
-        <div>
-            <h3>Socialize</h3>
-            <p>A website where developers can log in with their GitHub accounts and find each other based on their locations.</p>
-            <button><a href="https://www.socialize.tech">Visit the Project</a>
+        <div class="project-container">
+          <button class="project button"><a href="https://www.socialize.tech" style="text-decoration: none;" target="_blank"><h3 class="project-name">Socialize</h3></a></button>
+          <div class="project-description">
+            <p>A website where developers can log in with their GitHub accounts and find each other based on their locations.
+              <a href="https://github.com/EleoXDA/Socialize_RB" style="text-decoration: none;">Link to Repo</a>
+            </p>
+            <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: Ruby, ActiveRecord, HTML/CSS, JavaScript, PostgreSQL, Ruby on Rails, Heroku</h6>
+          </div>
         </div>
-        <div>
-            <h3>DevWork</h3>
+        <div class="project-container">
+          <button class="project button"><a href="https://www.devwork.team" style="text-decoration: none;" target="_blank"><h3 class="project-name">DevWork</h3></a></button>
+          <div class="project-description">
             <p>A platform where developers can ask other developers for help, be it paid or free, depending on due time & complexity.</p>
-            <button><a href="https://www.devwork.team">Visit the Project</a>
+            <a href="https://github.com/EleoXDA/Dev.Work_RB" style="text-decoration: none;">Link to Repo</a>
+          </p>
+          <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: Ruby, ActiveRecord, HTML/CSS, JavaScript, PostgreSQL, Ruby on Rails, Heroku</h6>
+          </div>
+        </div>
+        <div class="project-container">
+          <button class="project button"><a href="https://eleoxda.github.io/Quiz_TS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Simple Quiz</h3></a></button>
+          <div class="project-description">
+            <p>A  Quiz app that randomizes 5 questions and gives you score after quiz is finished</p>
+            <a href="https://github.com/EleoXDA/Quiz_TS" style="text-decoration: none;">Link to Repo</a>
+          </p>
+          <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript</h6>
+          </div>
+        </div>
+        <div class="project-container">
+          <button class="project button"><a href="https://eleoxda.github.io/Countdown_Timer_TS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Countdown Timer</h3></a></button>
+          <div class="project-description">
+            <p>An intuitive and user-friendly countdown timer that persists across browser</p>
+            <a href="https://github.com/EleoXDA/Countdown_Timer_TS" style="text-decoration: none;">Link to Repo</a>
+          </p>
+          <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript</h6>
+          </div>
+        </div>
+        <div class="project-container">
+          <button class="project button"><a href="https://eleoxda.github.io/Calculator_TS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Calculator</h3></a></button>
+          <div class="project-description">
+            <p>A calculator app without scientific functions that has theme options</p>
+            <a href="https://github.com/EleoXDA/Calculator_TS" style="text-decoration: none;">Link to Repo</a>
+          </p>
+          <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript</h6>
+          </div>
+        </div>
+        <div class="project-container">
+          <button class="project button"><a href="https://eleoxda.github.io/Expense_Tracker_TS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Expense Tracker</h3></a></button>
+          <div class="project-description">
+            <p>A user-friendly web application that allows users to track their income and expenses.</p>
+            <a href="https://github.com/EleoXDA/Socialize_RB" style="text-decoration: none;">Link to Repo</a>
+          </p>
+          <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript</h6>
+          </div>
+        </div>
+        <div class="project-container">
+          <button class="project button"><a href="https://eleoxda.github.io/Tip_Calculator_TS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Tip Calculator</h3></a></button>
+          <div class="project-description">
+            <p>An interactive tip calculator web application that allows users to input their bill amount, select the desired tip percentage, and choose their currency.</p>
+            <a href="https://github.com/EleoXDA/Tip_Calculator_TS" style="text-decoration: none;">Link to Repo</a>
+          </p>
+          <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript</h6>
+          </div>
         </div>
       </div>
       <div id="experience" class="column content">
