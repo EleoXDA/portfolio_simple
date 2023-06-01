@@ -10,6 +10,9 @@
 
   --color-button-dark: #999999;
   --color-button-text-dark: #000000;
+
+  --color-light-transparent: rgba(0,0,0,0.1);
+  --color-dark-transparent: rgba(255, 255, 255, 0.1);
 }
 
 .navbar-brand {
@@ -215,6 +218,16 @@ p,ul {
 
 .project-name {
   color: var(--color-button-text-light);
+}
+
+.hyperlink-in-projects {
+  color: var(--color-text-light);
+}
+
+hr {
+  border: none;
+  border-top: 2px dashed;
+  border-color: var(--color-light-transparent);
 }
 
 @media (max-width: 800px) {
