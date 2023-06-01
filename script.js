@@ -15,13 +15,32 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
   if (bgColor.trim() == '#F2F2F2') {
     root.style.setProperty('--color-background-light', '#000000');
     root.style.setProperty('--color-text-light', '#F2F2F2');
-    root.style.setProperty('--color-button-light', '#a5a5a5');
-    root.style.setProperty('--color-button-text-light', '#F2F2F2');
+    root.style.setProperty('--color-button-light', '#999999');
+    root.style.setProperty('--color-button-text-light', '#000000');
 
   } else {
     root.style.setProperty('--color-background-light', '#F2F2F2');
     root.style.setProperty('--color-text-light', '#000000');
-    root.style.setProperty('--color-button-light', '#999999');
-    root.style.setProperty('--color-button-text-light', '#000000');
+    root.style.setProperty('--color-button-light', '#a5a5a5');
+    root.style.setProperty('--color-button-text-light', '#F2F2F2');
   }
+});
+
+let observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateX(0)";
+    } else {
+      entry.target.style.opacity = "0";
+      entry.target.style.transform = "translateX(-50px)";
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.column').forEach(section => {
+  section.style.opacity = "0";
+  section.style.transform = "translateX(-50px)";
+  section.style.transition = "all 1s ease";
+  observer.observe(section);
 });
