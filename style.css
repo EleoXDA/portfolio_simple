@@ -22,6 +22,10 @@
   color: var(--color-text-light);
 }
 
+.navbar-brand-muted{
+  color: #999999;
+}
+
 .navbar-shortcuts, button {
   color:  var(--color-button-text-light);
   text-decoration: none;
@@ -187,9 +191,11 @@ hr {
   display: block;
 }
 
-#theme-toggle {
+#theme-toggle-img {
   position: absolute;
-  right: 15px;
+  left: 20px;
+  /* rotate:calc(90deg); */
+  max-width: 30px;
 }
 
 @media (max-width: 900px) {
@@ -220,10 +226,10 @@ hr {
     align-items: center;
   }
 
-  #theme-toggle {
+  /* #theme-toggle {
     position: relative;
     right: 0px;
-  }
+  } */
 
   .top-section {
     flex-direction: column;

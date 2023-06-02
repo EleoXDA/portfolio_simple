@@ -9,8 +9,9 @@ function showContent(contentId) {
   }
 }
 
-document.getElementById('theme-toggle').addEventListener('click', function() {
+document.getElementById('theme-toggle-img').addEventListener('click', function() {
   let root = document.documentElement;
+  let themeToggleImage = document.getElementById('theme-toggle-img');
   let bgColor = getComputedStyle(root).getPropertyValue('--color-background-light');
   if (bgColor.trim() == '#F2F2F2') {
     root.style.setProperty('--color-background-light', '#000000');
@@ -18,13 +19,16 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
     root.style.setProperty('--color-button-light', '#999999');
     root.style.setProperty('--color-button-text-light', '#000000');
     root.style.setProperty('--color-light-transparent', '#rgba(100,100,100,0.1)');
-
+    setTimeout(function(){
+      themeToggleImage.src = "lamp_off.png";}, 500)
   } else {
-    root.style.setProperty('--color-background-light', '#F2F2F2');
-    root.style.setProperty('--color-text-light', '#000000');
-    root.style.setProperty('--color-button-light', '#a5a5a5');
-    root.style.setProperty('--color-button-text-light', '#F2F2F2');
-    root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.1)');
+    setTimeout(function(){
+      root.style.setProperty('--color-background-light', '#F2F2F2');
+      root.style.setProperty('--color-text-light', '#000000');
+      root.style.setProperty('--color-button-light', '#a5a5a5');
+      root.style.setProperty('--color-button-text-light', '#F2F2F2');
+      root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.1)');}, 500)
+    themeToggleImage.src = "lamp_on.png";
   }
 });
 
