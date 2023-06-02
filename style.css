@@ -222,6 +222,7 @@ hr {
 
   #theme-toggle {
     position: relative;
+    right: 0px;
   }
 
   .top-section {
@@ -229,7 +230,7 @@ hr {
   }
 
   .contact-row {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .navigation {
