@@ -36,6 +36,7 @@
   border: 1px solid var(--color-button-light);
   border-radius: 30px;
   padding: 20px;
+  margin-top: 20px;
   box-shadow: 2px 2px 10px var(--color-button-light);
 }
 
