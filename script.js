@@ -118,23 +118,10 @@ let educationContent = `<h2>Education</h2>
 document.getElementById('education').innerHTML = educationContent;
 
 
-let prlangContent = `<h2>Programming Languages</h2>
-<p>
-  <br> - HTML
-  <br> - CSS
-  <br> - JavaScript
-  <br> - Dart
-  <br> - Ruby 
-  <br> - TypeScript
-  <br> - PHP
-  <br> - Kotlin
-</p>` 
-document.getElementById('prlang').innerHTML = prlangContent;
-
-
-let softContent = `<h2>Software Proficiencies</h2>
-<p>
-  <br> - Visual Studio Code 
+let softContent = `<div class="portfolio-sections">
+<div>
+<h2>Software Proficiency</h2>
+<p> - Visual Studio Code 
   <br> - Visual Studio 
   <br> - IntelliJ IDEA 
   <br> - Android Studio 
@@ -149,35 +136,40 @@ let softContent = `<h2>Software Proficiencies</h2>
   <br> - SQL 
   <br> - SQLite 
   <br> - PostgreSQL
-</p>` 
-document.getElementById('soft').innerHTML = softContent;
-
-
-let testContent = `<h2>Testing Frameworks</h2>
-<p>
-  <br> - Jest
+</p>
+<h2>Agile Methods</h2>
+<p> - Kanban 
+  <br> - Jira 
+  <br> - Scrum
+</p>
+</div>
+<div>
+<h2>Programming Languages</h2>
+<p> - HTML
+  <br> - CSS
+  <br> - JavaScript
+  <br> - Dart
+  <br> - Ruby 
+  <br> - TypeScript
+  <br> - PHP
+  <br> - Kotlin
+</p>
+<h2>Testing Frameworks</h2>
+<p> - Jest
   <br> - Jasmine 
   <br> - Mocha 
   <br> - RSpec 
   <br> - Widget Tester 
   <br> - JUnit 
   <br> - Espresso
-</p>` 
-document.getElementById('test').innerHTML = testContent;
+</p>
+</div>
+</div>
+` 
+document.getElementById('soft').innerHTML = softContent;
 
-
-let agileContent = `<h2>Agile Methods</h2>
-<p>
-  <br> - Kanban 
-  <br> - Jira 
-  <br> - Scrum
-</p>` 
-document.getElementById('agile').innerHTML = agileContent;
-
-
-let langContent = `<h2>Language Proficiencies</h2>
-<p>
-  <br> - English (C2) 
+let langContent = `<h2>Language Proficiency</h2>
+<p> - English (C2) 
   <br> - Turkish (Native) 
   <br> - Azerbaijani (Native) 
   <br> - Russian (B2) 
