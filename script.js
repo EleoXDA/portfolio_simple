@@ -19,6 +19,7 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
     root.style.setProperty('--color-button-light', '#999999');
     root.style.setProperty('--color-button-text-light', '#000000');
     root.style.setProperty('--color-light-transparent', '#rgba(100,100,100,0.1)');
+    themeToggleImage.src = "lamp_on.png";
     setTimeout(function(){
       themeToggleImage.src = "lamp_off.png";}, 500)
   } else {
@@ -27,7 +28,9 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
       root.style.setProperty('--color-text-light', '#000000');
       root.style.setProperty('--color-button-light', '#a5a5a5');
       root.style.setProperty('--color-button-text-light', '#F2F2F2');
-      root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.1)');}, 500)
+      root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.1)');
+      themeToggleImage.src = "lamp_on2.png";
+    }, 500)
     themeToggleImage.src = "lamp_on.png";
   }
 });
@@ -99,21 +102,22 @@ let educationContent = `<h2>Education</h2>
 </div>
 <div>
   <h3>Bachelor of Science: Biology</h3>
-  <p>Basics of scientific research - introduction to general scientific applications</p>
+  <p>Basics of scientific research - introduction to general scientific applications.</p>
 </div>`
 
 document.getElementById('education').innerHTML = educationContent;
 
 
 let prlangContent = `<h2>Programming Languages</h2>
-<br> - HTML
-<br> - CSS
-<br> - JavaScript
-<br> - Dart
-<br> - Ruby 
-<br> - TypeScript
-<br> - PHP
-<br> - Kotlin
+<p>
+  <br> - HTML
+  <br> - CSS
+  <br> - JavaScript
+  <br> - Dart
+  <br> - Ruby 
+  <br> - TypeScript
+  <br> - PHP
+  <br> - Kotlin
 </p>` 
 document.getElementById('prlang').innerHTML = prlangContent;
 
@@ -141,7 +145,7 @@ document.getElementById('soft').innerHTML = softContent;
 
 let testContent = `<h2>Testing Frameworks</h2>
 <p>
-  <br> - JesT 
+  <br> - Jest
   <br> - Jasmine 
   <br> - Mocha 
   <br> - RSpec 
@@ -163,7 +167,7 @@ document.getElementById('agile').innerHTML = agileContent;
 
 let langContent = `<h2>Language Proficiencies</h2>
 <p>
-  <br> - English (C1) 
+  <br> - English (C2) 
   <br> - Turkish (Native) 
   <br> - Azerbaijani (Native) 
   <br> - Russian (B2) 
@@ -229,7 +233,7 @@ let projects = `<h2>Projects</h2>
 <div class="project-container">
   <button class="project button"><a href="https://eleoxda.github.io/Tip_Calculator_TS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Tip Calculator</h3></a></button>
   <div class="project-description">
-    <p>An interactive tip calculator web application that allows users to input their bill amount, select the desired tip percentage, and choose their currency
+    <p>An interactive tip calculator web application that allows users to input their bill amount, select the desired tip percentage, and choose their currency.
     <a href="https://github.com/EleoXDA/Tip_Calculator_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
   <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript</h6>
   </div>
