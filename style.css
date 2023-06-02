@@ -29,6 +29,7 @@
 .navbar-shortcuts, button {
   color:  var(--color-button-text-light);
   text-decoration: none;
+  font-family: 'Arima', cursive;
 }
 
 .navbar-container, .navigation {
@@ -73,6 +74,7 @@ button {
   padding: 8px;
   margin: 4px;
   transition: background-color 0.5s ease;
+  white-space: nowrap;
 }
 
 button:hover {
@@ -192,10 +194,17 @@ hr {
 }
 
 #theme-toggle-img {
-  position: absolute;
-  left: 20px;
-  /* rotate:calc(90deg); */
+  position: relative;
+  left: 50px;
   max-width: 30px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1150px) {
+  .navigation {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 900px) {
@@ -222,25 +231,11 @@ hr {
 
 @media screen and (max-width: 768px) {
   .navbar-container, .row {
-    flex-direction: column;
     align-items: center;
-  }
-
-  /* #theme-toggle {
-    position: relative;
-    right: 0px;
-  } */
-
-  .top-section {
-    flex-direction: column;
   }
 
   .contact-row {
     margin-bottom: 40px;
-  }
-
-  .navigation {
-    flex-wrap: wrap;
   }
 
   .column, .responsive-img {
@@ -257,4 +252,10 @@ hr {
   h2 { font-size: 20px; }
   h3, h4, h5 { font-size: 16px; }
   h6, p, ul { font-size: 12px; }
+}
+
+@media (max-width: 620px) { 
+  .top-section {
+    flex-direction: column;
+  }
 }
