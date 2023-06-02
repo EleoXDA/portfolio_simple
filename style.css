@@ -28,10 +28,12 @@
 }
 
 .navbar-container, .navigation {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items:center;
   justify-content: center;
+  width: 100%;
 }
 
 .row {
@@ -54,16 +56,17 @@ body, .hyperlink-in-projects {
 
 .project-name {
   color: var(--color-button-text-light);
+  margin: 5px;
 }
 
 button {
   align-items: center;
   background-color: var(--color-button-light);
   border: 0;
-  border-radius: 100px;
+  border-radius: 30px;
   box-sizing: border-box;
   display: inline-flex;
-  padding: 5px;
+  padding: 8px;
   margin: 4px;
   transition: background-color 0.5s ease;
 }
@@ -113,7 +116,7 @@ h6, p, ul { font-size: 14px; }
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .project.button {
@@ -185,10 +188,11 @@ hr {
 }
 
 #theme-toggle {
-  margin-top: 20px;
+  position: absolute;
+  right: 15px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 900px) {
   .column, .responsive-img {
     flex: 0 0 100%;
     max-width: 100%;
@@ -214,6 +218,10 @@ hr {
   .navbar-container, .row {
     flex-direction: column;
     align-items: center;
+  }
+
+  #theme-toggle {
+    position: relative;
   }
 
   .top-section {
