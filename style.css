@@ -114,10 +114,6 @@ h6, p, ul { font-size: 14px; }
   grid-gap: 0px;
 }
 
-.contact-row {
-  margin-top: 20px;
-}
-
 .project-container {
   display: flex;
   flex-direction: row;
@@ -174,13 +170,11 @@ hr {
 .fa-github:hover { color: var(--color-text-light); }
 .fa-stack-overflow:hover { color: darkorange; }
 .fa-linkedin-in:hover { color: #0077B7; }
-.fa-android:hover { color: #f59812; }
-.fa-phone:hover { color: #006400; }
-.fa-envelope-open:hover { color: lightcoral; }
-.fa-map-location-dot:hover { color: darkred; }
+.fa-android:hover { color: #A4C639; }
+.fa-envelope-open:hover { color: rgb(0, 97, 97); }
 
-.fa-code:hover, .fa-github:hover, .fa-stack-overflow:hover, .fa-linkedin-in:hover, .fa-android:hover, .fa-phone:hover, .fa-envelope-open:hover, .fa-map-location-dot:hover {
-  transform: scale(1.5);
+.fa-code:hover, .fa-github:hover, .fa-stack-overflow:hover, .fa-linkedin-in:hover, .fa-android:hover, .fa-envelope-open:hover {
+  transform: scale(1.2);
   transition: 0.1s;
 }
 

@@ -47,6 +47,16 @@ let observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 
+var icon = document.getElementById('fa-code');
+
+icon.addEventListener('mouseover', function() {
+  icon.src = "google-developers.png";
+});
+
+icon.addEventListener('mouseout', function() {
+  icon.src = "google-developers-muted.png";
+});
+
 document.querySelectorAll('.column').forEach(section => {
   section.style.opacity = "0";
   section.style.transform = "translateX(-50px)";
