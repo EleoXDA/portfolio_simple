@@ -12,6 +12,7 @@ function showContent(contentId) {
 document.getElementById('theme-toggle-img').addEventListener('click', function() {
   let root = document.documentElement;
   let themeToggleImage = document.getElementById('theme-toggle-img');
+  let profile = document.getElementById('profpic');
   let bgColor = getComputedStyle(root).getPropertyValue('--color-background-light');
   if (bgColor.trim() == '#F2F2F2') {
     root.style.setProperty('--color-background-light', '#000000');
@@ -19,9 +20,10 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
     root.style.setProperty('--color-button-light', '#999999');
     root.style.setProperty('--color-button-text-light', '#000000');
     root.style.setProperty('--color-light-transparent', '#rgba(100,100,100,0.1)');
-    themeToggleImage.src = "lamp_on.png";
+    themeToggleImage.src = "images/lamp_on.png";
+    profile.src = "images/profiled.png";
     setTimeout(function(){
-      themeToggleImage.src = "lamp_off.png";}, 500)
+      themeToggleImage.src = "images/lamp_off.png";}, 500)
   } else {
     setTimeout(function(){
       root.style.setProperty('--color-background-light', '#F2F2F2');
@@ -29,9 +31,10 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
       root.style.setProperty('--color-button-light', '#a5a5a5');
       root.style.setProperty('--color-button-text-light', '#F2F2F2');
       root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.1)');
-      themeToggleImage.src = "lamp_on2.png";
+      themeToggleImage.src = "images/lamp_on2.png";
+      profile.src = "images/profile.png";
     }, 500)
-    themeToggleImage.src = "lamp_on.png";
+    themeToggleImage.src = "images/lamp_on.png";
   }
 });
 
@@ -50,11 +53,11 @@ let observer = new IntersectionObserver(entries => {
 var icon = document.getElementById('fa-code');
 
 icon.addEventListener('mouseover', function() {
-  icon.src = "google-developers.png";
+  icon.src = "images/google-developers.png";
 });
 
 icon.addEventListener('mouseout', function() {
-  icon.src = "google-developers-muted.png";
+  icon.src = "images/google-developers-muted.png";
 });
 
 document.querySelectorAll('.column').forEach(section => {
