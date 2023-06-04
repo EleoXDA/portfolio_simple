@@ -1,12 +1,12 @@
 :root {
   --color-background-light: #F2F2F2;
-  --color-text-light: #000000;
-  --color-background-dark: #000000;
+  --color-text-light: #232323;
+  --color-background-dark: #232323;
   --color-text-dark: #F2F2F2;
   --color-button-light: #a5a5a5;
-  --color-button-text-light: #FFFFFF;
+  --color-button-text-light: #F2F2F2;
   --color-button-dark: #999999;
-  --color-button-text-dark: #000000;
+  --color-button-text-dark: #232323;
   --color-light-transparent: rgba(0,0,0,0.1);
   --color-dark-transparent: rgba(255, 255, 255, 0.1);
 }
@@ -28,7 +28,7 @@
 }
 
 .navbar-shortcuts, button {
-  color:  var(--color-button-text-light);
+  color: var(--color-button-text-light);
   text-decoration: none;
   font-family: 'Arima', cursive;
 }
@@ -38,6 +38,10 @@
   border-radius: 30px;
   padding: 20px;
   margin-top: 20px;
+  box-shadow: 2px 2px 10px var(--color-button-light);
+}
+
+.profile-picture {
   box-shadow: 2px 2px 10px var(--color-button-light);
 }
 
@@ -109,7 +113,7 @@ ul {
   padding-left: 1em;
 }
 
-.column, .responsive-img {
+.column {
   flex: 0 0 55%; 
   max-width: 55%;
   box-sizing: border-box;
@@ -165,6 +169,7 @@ ul {
 
 .profile-picture {
   border-radius: 50%;
+  box-shadow: 2px 2px 10px var(--color-button-light);
 }
 
 .icon-btn, .Linkedin.btn, .XDA.btn, .google-dev.btn, .stack.btn, .phone, .mail, .location {
@@ -253,28 +258,28 @@ hr {
 }
 
 @media (max-width: 1400px) {
-  .column, .responsive-img {
+  .column {
     flex: 0 0 65%;
     max-width: 65%;
   }
 }
 
 @media (max-width: 1200px) {
-  .column, .responsive-img {
+  .column {
     flex: 0 0 75%;
     max-width: 75%;
   }
 }
 
 @media (max-width: 1000px) {
-  .column, .responsive-img {
+  .column {
     flex: 0 0 85%;
     max-width: 85%;
   }
 }
 
 @media (max-width: 900px) {
-  .column, .responsive-img {
+  .column {
     flex: 0 0 90%;
     max-width: 90%;
   }
@@ -294,7 +299,7 @@ hr {
     grid-area: 1 / 1 / 2 / 2;
   }
 
-  .column, .responsive-img {
+  .column {
     flex: 0 0 95%;
     max-width: 95%;
   }
@@ -314,7 +319,7 @@ hr {
     text-align: center;
   }
 
-  .column, .responsive-img {
+  .column {
     flex: 0 0 100%;
     max-width: 100%;
   }
