@@ -11,6 +11,26 @@
   --color-dark-transparent: rgba(255, 255, 255, 0.1);
 }
 
+html {
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .navbar-brand, .navbar-brand-muted, #contact-me-text {
   font-weight: bold;
   text-align: center;
