@@ -116,18 +116,22 @@ let experienceContent = `<h2>Experience</h2>
   <h3>Junior Cross-Platform Developer at koviko GmbH</h3>
   <p>Responsible for building a cross-platform app for learning German language using Flutter/Dart and PHP backend with Yii framework.</p>
 </div>
+<hr>
 <div>
   <h3>Junior Developer at XDA-Developers</h3>
   <p>Worked on Web, Android, and cross-platform app development using Ruby (on Rails), JavaScript, Typescript and Flutter.</p>
 </div>
+<hr>
 <div>
   <h3>Research Assistant/Project Responsible at Friedrich Schiller University of Jena</h3>
   <p>Increased effectivity of CPU and GPU preparation on silicon chips. Managed project budget for 30 months and increased cost effectivity by 15%. Demonstrated strong writing skills in original correspondence and reports.</p>
 </div>
+<hr>
 <div>
   <h3>Junior Mobile Developer at recruiT</h3>
   <p>Modified mobile android applications using Kotlin and smali language. Tested applications using JUnit, adapted the app for fur. Prepared, rewrote, and edited parts of apps' user interfaces using UI/UX tools.</p>
 </div>
+<hr>
 <div>
   <h3>MSc. Researcher/Project Responsible at Middle East Technical University</h3>
   <p>Involved in silicon chip manufacturing and MEMS for automated testing. Validated incoming data to check information accuracy and integrity while locating and correcting concerns. Published research and review papers in peer-reviewed scientific journals.</p>
@@ -140,10 +144,12 @@ let educationContent = `<h2>Education</h2>
   <p>9-week full-time intensive coding bootcamp learning HTML, CSS, Bootstrap, 
     <br>JavaScript ES6, SQL, Git, GitHub, Heroku and Ruby on Rails.</p>
 </div>
+<hr>
 <div>
   <h3>Master of Science: Micro and Nanotechnology</h3>
   <p>Development of silicon chips and MEMS devices for automated testing.</p>
 </div>
+<hr>
 <div>
   <h3>Bachelor of Science: Biology</h3>
   <p>Basics of scientific research - introduction to general scientific applications.</p>
@@ -154,48 +160,46 @@ document.getElementById('education').innerHTML = educationContent;
 let softContent = `<div class="portfolio-sections">
 <div>
 <h2>Software Proficiency</h2>
-<p> - Visual Studio Code 
-  <br> - Visual Studio 
-  <br> - IntelliJ IDEA 
-  <br> - Android Studio 
-  <br> - Git 
-  <br> - GitHub 
-  <br> - GitLab 
-  <br> - Bitbucket 
-  <br> - Figma 
-  <br> - Adobe XD 
-  <br> - Prototype tools 
-  <br> - DB Browser 
-  <br> - SQL 
-  <br> - SQLite 
-  <br> - PostgreSQL
-</p>
-<h2>Agile Methods</h2>
-<p> - Kanban 
-  <br> - Jira 
-  <br> - Scrum
-</p>
+
+<div class="category">
+  <h3>Development</h3>
+  <ul>
+    <li>Web Development:<br>Javascript-Typescript (Vue.JS, Node.JS), CSS(Sass, SCSS), HTML</li>
+    <li>Server-side Scripting:<br>Ruby (Ruby on Rails), PhP (Yii)</li>
+    <li>Mobile Development:<br>Kotlin (Ktor), Dart (Flutter)</li>
+    <li>Agile Development:<br>Kanban, Jira, Scrum</li>
+  </ul>
+  <hr>
+  <h3>Testing and Version Control</h3>
+  <ul>
+    <li>Test Frameworks:<br>Javascript(Jest, Jasmine, Mocha), Ruby (RSpec), Flutter (Widget Tester), Kotlin (JUnit, Espresso), PHP (PHPUnit), Web (Selenium)</li>
+    <li>Integrated Development Environments (IDEs):<br>Visual Studio Code, IntelliJ IDEA, Android Studio</li>
+    <li>Version Control Systems (VCS):<br>Git (Platforms: GitHub, GitLab, Bitbucket)</li>
+  </ul>
+
+  <hr>
+  <h3>Design and Database Management</h3>
+  <ul>
+    <li>Prototype tools:<br>Figma, Adobe XD, Sketch</li>
+    <li>Databases and Database Tools:<br>MySQL, MariaDB, Redis, DB Browser, SQL, SQLite, PostgreSQL, pgAdmin, phpMyAdmin</li>
+  </ul>
+
+  <hr>
+  <h3>Command Line, Build Tools, and API Testing</h3>
+  <ul>
+    <li>Command Line Interface (CLI):<br>Bash, Powershell, Command Prompt, Terminal</li>
+    <li>Build Tools and Package Managers:<br>npm, Yarn, Webpack, Gradle, Maven, Rake</li>
+    <li>API Testing Tools:<br>Postman</li>
+  </ul>
+
+  <hr>
+  <h3>Containerization, Cloud, and Continuous Integration</h3>
+  <ul>
+    <li>Containerization and Virtualization Tools:<br>Docker, VMWare</li>
+    <li>Cloud Platforms:<br>Google Cloud, AWS (novice)</li>
+    <li>Continuous Integration/Continuous Deployment (CI/CD) Tools:<br>Jenkins, GitHub Actions</li>
+  </ul>
 </div>
-<div>
-<h2>Programming Languages</h2>
-<p> - HTML
-  <br> - CSS
-  <br> - JavaScript
-  <br> - Dart
-  <br> - Ruby 
-  <br> - TypeScript
-  <br> - PHP
-  <br> - Kotlin
-</p>
-<h2>Testing Frameworks</h2>
-<p> - Jest
-  <br> - Jasmine 
-  <br> - Mocha 
-  <br> - RSpec 
-  <br> - Widget Tester 
-  <br> - JUnit 
-  <br> - Espresso
-</p>
 </div>
 </div>` 
 document.getElementById('soft').innerHTML = softContent;
