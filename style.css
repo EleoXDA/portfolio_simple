@@ -24,6 +24,7 @@
 
 .navbar-brand-muted{
   color: #999999;
+  font-weight: 500;
 }
 
 .navbar-shortcuts, button {
