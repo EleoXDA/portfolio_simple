@@ -152,7 +152,6 @@ ul {
   flex-shrink: 1;
 }
 
-
 .info {
   flex-direction: column;
   justify-content: space-between;
@@ -330,5 +329,3 @@ hr {
     flex-direction: column;
   }
 }
-
-
