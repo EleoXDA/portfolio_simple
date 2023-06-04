@@ -21,7 +21,7 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
     root.style.setProperty('--color-button-text-light', '#000000');
     root.style.setProperty('--color-light-transparent', '#rgba(100,100,100,0.1)');
     themeToggleImage.src = "images/lamp_on.png";
-    profile.src = "images/profiled.png";
+    profile.src = "images/profpicd.png";
     setTimeout(function(){
       themeToggleImage.src = "images/lamp_off.png";}, 500)
   } else {
@@ -32,7 +32,7 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
       root.style.setProperty('--color-button-text-light', '#F2F2F2');
       root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.1)');
       themeToggleImage.src = "images/lamp_on2.png";
-      profile.src = "images/profile.png";
+      profile.src = "images/profpicb.png";
     }, 500)
     themeToggleImage.src = "images/lamp_on.png";
   }
