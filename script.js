@@ -215,21 +215,12 @@ document.getElementById('lang').innerHTML = langContent;
 
 let projects = `<h2>Projects</h2>
 <div class="project-container">
-  <button class="project button"><a href="https://www.socialize.tech" style="text-decoration: none;" target="_blank"><h3 class="project-name">Socialize</h3></a></button>
+  <button class="project button"><a href="https://eleoxda.github.io/Ace_Hunter_JS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Ace Hunter</h3></a></button>
   <div class="project-description">
-    <p>A website where developers can log in with their GitHub accounts and find each other based on their locations.
-      <a href="https://github.com/EleoXDA/Socialize_RB" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-    <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: Ruby, ActiveRecord, HTML/CSS, JavaScript, PostgreSQL, Ruby on Rails, Heroku</h6>
-  </div>
-</div>
-<hr>
-<div class="project-container">
-  <button class="project button"><a href="https://www.devwork.team" style="text-decoration: none;" target="_blank"><h3 class="project-name">DevWork</h3></a></button>
-  <div class="project-description">
-    <p>A platform where developers can ask other developers for help, be it paid or free, depending on due time & complexity.
-    <a href="https://github.com/EleoXDA/Dev.Work_RB" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-    <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: Ruby, ActiveRecord, HTML/CSS, JavaScript, PostgreSQL, Ruby on Rails, Heroku</h6>
-  </div>
+    <p> JavaScript card game to find the Ace of Spades card among four cards.
+      <a href="https://github.com/EleoXDA/Ace_Hunter_JS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
+      <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Javascript, GitHub Actions, GitHub Pages</h6>
+      </div>
 </div>
 <hr>
 <div class="project-container">
@@ -237,7 +228,7 @@ let projects = `<h2>Projects</h2>
   <div class="project-description">
     <p>A  Quiz app that randomizes 5 questions and gives you score after quiz is finished.
     <a href="https://github.com/EleoXDA/Quiz_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-  <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript</h6>
+  <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages</h6>
   </div>
 </div>
 <hr>
@@ -246,8 +237,8 @@ let projects = `<h2>Projects</h2>
   <div class="project-description">
     <p>An intuitive and user-friendly countdown timer that persists across browser.
     <a href="https://github.com/EleoXDA/Countdown_Timer_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-  <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript</h6>
-  </div>
+    <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages</h6>
+    </div>
 </div>
 <hr>
 <div class="project-container">
@@ -255,8 +246,8 @@ let projects = `<h2>Projects</h2>
   <div class="project-description">
     <p>A calculator app without scientific functions that has theme options.
     <a href="https://github.com/EleoXDA/Calculator_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-  <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript</h6>
-  </div>
+    <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages</h6>
+    </div>
 </div>
 <hr>
 <div class="project-container">
@@ -264,8 +255,8 @@ let projects = `<h2>Projects</h2>
   <div class="project-description">
     <p>A user-friendly web application that allows users to track their income and expenses.
     <a href="https://github.com/EleoXDA/Socialize_RB" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-  <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript</h6>
-  </div>
+    <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages</h6>
+    </div>
 </div>
 <hr>
 <div class="project-container">
@@ -273,7 +264,7 @@ let projects = `<h2>Projects</h2>
   <div class="project-description">
     <p>An interactive tip calculator web application that allows users to input their bill amount, select the desired tip percentage, and choose their currency.
     <a href="https://github.com/EleoXDA/Tip_Calculator_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-  <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript</h6>
-  </div>
+    <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages</h6>
+    </div>
 </div>`
 document.getElementById('projects').innerHTML = projects;
