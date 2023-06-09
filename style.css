@@ -83,11 +83,6 @@ html {
   margin: 0 15px;
 }
 
-body {
-  min-width: 100vh;
-  min-width: 100svh;
-}
-
 body, .project-name, .hyperlink-in-projects {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
