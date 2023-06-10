@@ -95,10 +95,33 @@ icon.addEventListener('mouseout', function() {
 
 document.querySelectorAll('.column').forEach(section => {
   section.style.opacity = "0";
-  section.style.transform = "translateX(-50px)";
-  section.style.transition = "all 0.5s ease";
+  section.style.transform = "translateX(-10px)";
+  section.style.transition = "all 0.1s ease";
   observer.observe(section);
 });
+
+window.addEventListener('resize', adjustColumnWidth);
+
+function adjustColumnWidth() {
+  var viewportWidth = window.innerWidth;
+  var columnElements = document.querySelectorAll('.column');
+
+  columnElements.forEach(function(column) {
+    if (viewportWidth >= 1400) {
+      column.style.flex = '0 0 65%';
+      column.style.maxWidth = '65%';
+    } else if (viewportWidth <= 768) {
+      column.style.flex = '0 0 100%';
+      column.style.maxWidth = '100%';
+    } else {
+      var percentage = 65 + (1400 - viewportWidth) * (35 / 632);
+      column.style.flex = '0 0 ' + percentage + '%';
+      column.style.maxWidth = percentage + '%';
+    }
+  });
+}
+
+adjustColumnWidth();
 
 
 let homeContent = `<h2>About Me</h2>
@@ -106,8 +129,7 @@ let homeContent = `<h2>About Me</h2>
     </p><hr><p>My pursuit of knowledge and technical skills led me to Le Wagon Coding Bootcamp, a transformative experience that certified me as a Web Developer. This immersive program introduced me to a variety of programming languages, such as Ruby on Rails, JavaScript, and CSS, effectively preparing me for a dynamic career in the tech industry. Upon completion of the bootcamp, I took up a freelance role as a Junior Developer with XDA-Developers, leveraging my newly acquired skills to develop web, Android, and cross-platform applications.
     </p><hr><p>Furthering my career, I embraced the opportunity to work as a Junior Cross-Platform Developer with koviko GmbH. During this tenure, I spearheaded the development of a German language learning app using Flutter/Dart, demonstrating my ability to work with cross-platform mobile frameworks and languages. Additionally, my role involved using the PHP backend with the Yii framework and performing application testing using Widget Tester, ultimately consolidating my experience in project management and software development.
     </p><hr><p>In summary, my career journey has been characterized by continuous learning, versatility, and a commitment to excellence. With my extensive skills in software development, testing, and project management, I am eager to contribute to a new position, where I can continue to ensure the delivery of high-quality software solutions.
-    </p>
-`;
+    </p>`;
 document.getElementById('home').innerHTML = homeContent;
 
 
@@ -138,7 +160,7 @@ let experienceContent = `<h2>Experience</h2>
 </div>`
 document.getElementById('experience').innerHTML = experienceContent;
 
-let educationContent = `<h2>Education</h2>
+let educationContent = `<h2>Education</h2><ul>
 <div>
   <h3>Le Wagon Coding Bootcamp - Web Development</h3>
   <p>9-week full-time intensive coding bootcamp learning HTML, CSS, Bootstrap, 
@@ -157,48 +179,52 @@ let educationContent = `<h2>Education</h2>
 document.getElementById('education').innerHTML = educationContent;
 
 
-let softContent = `<div class="portfolio-sections">
-<div>
-<h2>Software Proficiency</h2>
-
+let softContent = `<h2>Software Proficiency</h2>
 <div class="category">
+<div class="section">
   <h3>Development</h3>
   <ul>
-    <li>Web Development:<br>Javascript-Typescript (Vue.JS, Node.JS), CSS(Sass, SCSS), HTML</li>
-    <li>Server-side Scripting:<br>Ruby (Ruby on Rails), PhP (Yii)</li>
-    <li>Mobile Development:<br>Kotlin (Ktor), Dart (Flutter)</li>
-    <li>Agile Development:<br>Kanban, Jira, Scrum</li>
+    <li><u>Web Development:</u><ul>Javascript-Typescript (Vue.JS, Node.JS), CSS(Sass, SCSS), HTML</ul></li>
+    <li><u>Server-side Scripting:</u><ul>Ruby (Ruby on Rails), PhP (Yii)</ul></li>
+    <li><u>Mobile Development:</u><ul>Kotlin (Ktor), Dart (Flutter)</ul></li>
+    <li><u>Agile Development:</u><ul>Kanban, Jira, Scrum</ul></li>
   </ul>
   <hr>
+  </div>
+  <div class="section">
   <h3>Testing and Version Control</h3>
   <ul>
-    <li>Test Frameworks:<br>Javascript(Jest, Jasmine, Mocha), Ruby (RSpec), Flutter (Widget Tester), Kotlin (JUnit, Espresso), PHP (PHPUnit), Web (Selenium)</li>
-    <li>Integrated Development Environments (IDEs):<br>Visual Studio Code, IntelliJ IDEA, Android Studio</li>
-    <li>Version Control Systems (VCS):<br>Git (Platforms: GitHub, GitLab, Bitbucket)</li>
+    <li><u>Test Frameworks:</u><ul>Javascript(Jest, Jasmine, Mocha), Ruby (RSpec), Flutter (Widget Tester), Kotlin (JUnit, Espresso), PHP (PHPUnit), Web (Selenium)</ul></li>
+    <li><u>Integrated Development Environments (IDEs):</u><ul>Visual Studio Code, IntelliJ IDEA, Android Studio</ul></li>
+    <li><u>Version Control Systems (VCS):</u><ul>Git (Platforms: GitHub, GitLab, Bitbucket)</ul></li>
   </ul>
-
+  </div>
   <hr>
+  <div class="section">
   <h3>Design and Database Management</h3>
   <ul>
-    <li>Prototype tools:<br>Figma, Adobe XD, Sketch</li>
-    <li>Databases and Database Tools:<br>MySQL, MariaDB, Redis, DB Browser, SQL, SQLite, PostgreSQL, pgAdmin, phpMyAdmin</li>
+    <li><u>Prototype tools:</u><ul>Figma, Adobe XD, Sketch</ul></li>
+    <li><u>Databases and Database Tools:</u><ul>MySQL, MariaDB, Redis, DB Browser, SQL, SQLite, PostgreSQL, pgAdmin, phpMyAdmin</ul></li>
   </ul>
-
+  </div>
   <hr>
+  <div class="section">
   <h3>Command Line, Build Tools, and API Testing</h3>
   <ul>
-    <li>Command Line Interface (CLI):<br>Bash, Powershell, Command Prompt, Terminal</li>
-    <li>Build Tools and Package Managers:<br>npm, Yarn, Webpack, Gradle, Maven, Rake</li>
-    <li>API Testing Tools:<br>Postman</li>
+    <li><u>Command Line Interface (CLI):</u><ul>Bash, Powershell, Command Prompt, Terminal</ul></li>
+    <li><u>Build Tools and Package Managers:</u><ul>npm, Yarn, Webpack, Gradle, Maven, Rake</ul></li>
+    <li><u>API Testing Tools:</u><ul>Postman</ul></li>
   </ul>
-
+  </div>
   <hr>
+  <div class="section">
   <h3>Containerization, Cloud, and Continuous Integration</h3>
   <ul>
-    <li>Containerization and Virtualization Tools:<br>Docker, VMWare</li>
-    <li>Cloud Platforms:<br>Google Cloud, AWS (novice)</li>
-    <li>Continuous Integration/Continuous Deployment (CI/CD) Tools:<br>Jenkins, GitHub Actions</li>
+    <li><u>Containerization and Virtualization Tools:</u><ul>Docker, VMWare</ul></li>
+    <li><u>Cloud Platforms:</u><ul>Google Cloud, AWS (novice)</ul></li>
+    <li><u>Continuous Integration/Continuous Deployment (CI/CD) Tools:</u><ul>Jenkins, GitHub Actions</ul></li>
   </ul>
+  </div>
 </div>
 </div>
 </div>` 

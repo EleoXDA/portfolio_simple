@@ -53,7 +53,7 @@ html {
   font-family: 'Arima', cursive;
 }
 
-.column:not(#soft) {
+.column {
   border: 1px solid var(--color-button-light);
   border-radius: 30px;
   padding: 20px;
@@ -133,14 +133,22 @@ ul {
   padding-left: 1em;
 }
 
-.category li {
-  text-indent: -1em;
+.category {
+  column-count: 2;
+  column-gap: 1em;
+}
+
+.section {
+  break-inside: avoid;
+  padding-bottom: 1em;
+}
+
+.category li ul {
   padding-left: 1em;
+  overflow-wrap: break-word;
 }
 
 .column {
-  flex: 0 0 55%; 
-  max-width: 55%;
   box-sizing: border-box;
   height: auto;
 }
@@ -282,34 +290,6 @@ hr {
   }
 }
 
-@media (max-width: 1400px) {
-  .column {
-    flex: 0 0 65%;
-    max-width: 65%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .column {
-    flex: 0 0 75%;
-    max-width: 75%;
-  }
-}
-
-@media (max-width: 1000px) {
-  .column {
-    flex: 0 0 85%;
-    max-width: 85%;
-  }
-}
-
-@media (max-width: 900px) {
-  .column {
-    flex: 0 0 90%;
-    max-width: 90%;
-  }
-}
-
 @media (max-width: 800px) {
   .top-section {
     grid-template-columns: 1fr;
@@ -323,16 +303,15 @@ hr {
   .profile {
     grid-area: 1 / 1 / 2 / 2;
   }
-
-  .column {
-    flex: 0 0 95%;
-    max-width: 95%;
-  }
 }
 
 @media screen and (max-width: 768px) {
   .navbar-container, .row {
     align-items: center;
+  }
+
+  .category {
+    column-count: 1;
   }
 
   .contact-row {
@@ -353,9 +332,7 @@ hr {
   h2 { font-size: 22px; }
   h3, h4, h5 { font-size: 16px; }
   h6, p, ul { font-size: 12px; }
-}
 
-@media (max-width: 620px) { 
   .top-section {
     flex-direction: column;
   }
