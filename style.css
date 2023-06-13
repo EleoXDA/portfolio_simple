@@ -255,6 +255,34 @@ hr {
   margin-bottom: 8px;
 }
 
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  font-family: Arima, cursive;
+  font-size: 11px;
+  visibility: hidden;
+  background-color: var(--color-text-light);
+  color: var(--color-button-text-light);
+  text-align: center;
+  padding: 2px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 15%; /* Position the tooltip above the image */
+  left: 350%;
+  margin-left: -60px; /* Use half of the width to center the tooltip */
+  width: 80px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.theme-toggle:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
 
 .portfolio-sections {
   display: grid;
