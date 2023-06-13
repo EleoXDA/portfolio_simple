@@ -160,7 +160,7 @@ let experienceContent = `<h2>Experience</h2>
 </div>`
 document.getElementById('experience').innerHTML = experienceContent;
 
-let educationContent = `<h2>Education</h2><ul>
+let educationContent = `<h2>Education</h2>
 <div>
   <h3>Le Wagon Coding Bootcamp - Web Development</h3>
   <p>9-week full-time intensive coding bootcamp learning HTML, CSS, Bootstrap, 
