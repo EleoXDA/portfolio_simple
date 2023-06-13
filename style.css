@@ -135,7 +135,16 @@ ul {
 
 .section {
   break-inside: avoid;
-  padding-bottom: 1em;
+  /* padding-bottom: 1em; */
+}
+
+.section > h3 {
+  margin-top: 0px;
+}
+
+.section > hr {
+  margin-top: 5px;
+  margin-bottom: 25px;
 }
 
 .category li ul {
