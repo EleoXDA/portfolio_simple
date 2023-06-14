@@ -52,9 +52,11 @@ let themeToggleImage = document.getElementById('theme-toggle-img');
 themeToggleImage.addEventListener('mouseenter', function() {
   tooltip.style.visibility = 'visible';
   tooltip.style.opacity = '1';
+  tooltip.style.transition = "all 0.25s ease-in";
   setTimeout(function() {
     tooltip.style.visibility = 'hidden';
     tooltip.style.opacity = '0';
+    tooltip.style.transition = 'all 0.4s ease';
   }, 2500);
 });
 
