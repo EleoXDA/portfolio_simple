@@ -41,6 +41,25 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
   }
 });
 
+let tooltip = document.getElementById('tooltip');
+let themeToggleImage = document.getElementById('theme-toggle-img');
+
+themeToggleImage.addEventListener('mouseenter', function() {
+  tooltip.style.visibility = 'visible';
+  tooltip.style.opacity = '1';
+  setTimeout(function() {
+    tooltip.style.visibility = 'hidden';
+    tooltip.style.opacity = '0';
+  }, 2500);
+});
+
+themeToggleImage.addEventListener('mouseleave', function() {
+  setTimeout(function() {
+    tooltip.style.visibility = 'hidden';
+    tooltip.style.opacity = '0';
+  }, 500);
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   let theme = localStorage.getItem('theme');
   let root = document.documentElement;
