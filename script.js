@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
       root.style.setProperty('--color-button-light', '#999999');
       root.style.setProperty('--color-button-text-light', '#000000');
       root.style.setProperty('--color-light-transparent', '#rgba(100,100,100,0.1)');
-      themeToggleImage.src = "images/lamp_on.png";
+      themeToggleImage.src = "images/lamp_off.png";
       profile.src = "images/profpicd.png";
   } else {
       // Apply light theme (or default theme)
