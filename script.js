@@ -1,3 +1,8 @@
+function handleClick(e, contentId) {
+  e.preventDefault(); // This prevents the default action, i.e., navigating to "#"
+  showContent(contentId);
+}
+
 function showContent(contentId) {
   var contentElements = document.getElementsByClassName("content");
   for(var i = 0; i < contentElements.length; i++) {
