@@ -107,14 +107,14 @@ let observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 
-var icon = document.getElementById('fa-code');
+var googledevicon = document.getElementById('fa-code');
 
-icon.addEventListener('mouseover', function() {
-  icon.src = "images/google-developers.png";
+googledevicon.addEventListener('mouseover', function() {
+  googledevicon.src = "images/google-developers.png";
 });
 
-icon.addEventListener('mouseout', function() {
-  icon.src = "images/google-developers-muted.png";
+googledevicon.addEventListener('mouseout', function() {
+  googledevicon.src = "images/google-developers-muted.png";
 });
 
 document.querySelectorAll('.column').forEach(section => {
@@ -132,13 +132,13 @@ function adjustColumnWidth() {
 
   columnElements.forEach(function(column) {
     if (viewportWidth >= 1400) {
-      column.style.flex = '0 0 65%';
-      column.style.maxWidth = '65%';
+      column.style.flex = '0 0 55%';
+      column.style.maxWidth = '55%';
     } else if (viewportWidth <= 768) {
       column.style.flex = '0 0 100%';
       column.style.maxWidth = '100%';
     } else {
-      var percentage = 65 + (1400 - viewportWidth) * (35 / 632);
+      var percentage = 55 + (1400 - viewportWidth) * (35 / 600);
       column.style.flex = '0 0 ' + percentage + '%';
       column.style.maxWidth = percentage + '%';
     }
@@ -203,7 +203,8 @@ let educationContent = `<h2>Education</h2>
 document.getElementById('education').innerHTML = educationContent;
 
 
-let softContent = `<h2>Software Proficiency</h2>
+let softContent = `<h2 id='softh2'>Software Proficiency</h2>
+<hr id='softhr'>
 <div class="category">
 <div class="section">
   <h3>Development</h3>
