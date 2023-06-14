@@ -185,7 +185,7 @@ let softContent = `<h2>Software Proficiency</h2>
   <h3>Development</h3>
   <ul>
     <li><u>Web Development:</u><ul>Javascript-Typescript (Vue.JS, Node.JS), CSS(Sass, SCSS), HTML</ul></li>
-    <li><u>Server-side Scripting:</u><ul>Ruby (Ruby on Rails), PhP (Yii)</ul></li>
+    <li><u>Server-side Scripting:</u><ul>Ruby (Ruby on Rails), PHP (Yii)</ul></li>
     <li><u>Mobile Development:</u><ul>Kotlin (Ktor), Dart (Flutter)</ul></li>
     <li><u>Agile Development:</u><ul>Kanban, Jira, Scrum</ul></li>
   </ul>
