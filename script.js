@@ -1,3 +1,8 @@
+function handleClick(e, contentId) {
+  e.preventDefault(); // This prevents the default action, i.e., navigating to "#"
+  showContent(contentId);
+}
+
 function showContent(contentId) {
   var contentElements = document.getElementsByClassName("content");
   for(var i = 0; i < contentElements.length; i++) {
@@ -73,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
       root.style.setProperty('--color-button-light', '#999999');
       root.style.setProperty('--color-button-text-light', '#000000');
       root.style.setProperty('--color-light-transparent', '#rgba(100,100,100,0.1)');
-      themeToggleImage.src = "images/lamp_on.png";
+      themeToggleImage.src = "images/lamp_off.png";
       profile.src = "images/profpicd.png";
   } else {
       // Apply light theme (or default theme)
@@ -204,7 +209,7 @@ let softContent = `<h2>Software Proficiency</h2>
   <h3>Development</h3>
   <ul>
     <li><u>Web Development:</u><ul>Javascript-Typescript (Vue.JS, Node.JS), CSS(Sass, SCSS), HTML</ul></li>
-    <li><u>Server-side Scripting:</u><ul>Ruby (Ruby on Rails), PhP (Yii)</ul></li>
+    <li><u>Server-side Scripting:</u><ul>Ruby (Ruby on Rails), PHP (Yii)</ul></li>
     <li><u>Mobile Development:</u><ul>Kotlin (Ktor), Dart (Flutter)</ul></li>
     <li><u>Agile Development:</u><ul>Kanban, Jira, Scrum</ul></li>
   </ul>
