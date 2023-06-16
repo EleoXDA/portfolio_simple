@@ -221,11 +221,11 @@ ul {
   box-shadow: 2px 2px 10px var(--color-button-light);
 }
 
-.icon-btn, .Linkedin.btn, .XDA.btn, .google-dev.btn, .stack.btn, .phone, .mail, .location {
+.icon-btn, .Linkedin.btn, .xda.btn, .codv.btn, .googledev.btn, .mail {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: 7px;
 }
 
 hr {
@@ -234,20 +234,17 @@ hr {
   border-color: var(--color-light-transparent);
 }
 
-.fa-code, .fa-github, .fa-stack-overflow, .fa-linkedin-in, .fa-android, .phone, .mail, .location {
+.fa-github, .codewars, .fa-linkedin-in, .mail {
   color: darkgray;
 }
 
-.fa-code:hover { color: red; }
 .fa-github:hover { color: var(--color-text-light); }
-.fa-stack-overflow:hover { color: darkorange; }
 .fa-linkedin-in:hover { color: #0077B7; }
-.fa-android:hover { color: #A4C639; }
 .fa-envelope-open:hover { color: rgb(0, 97, 97); }
 
-.fa-code:hover, .fa-github:hover, .fa-stack-overflow:hover, .fa-linkedin-in:hover, .fa-android:hover, .fa-envelope-open:hover {
-  transform: scale(1.2);
-  transition: 0.1s;
+.googledev:hover, .fa-github:hover, .codewars:hover, .fa-linkedin-in:hover, .xda:hover, .fa-envelope-open:hover {
+  transform: scale(1.25);
+  transition: 0.4s;
 }
 
 .content {
