@@ -107,7 +107,7 @@ let observer = new IntersectionObserver(entries => {
       entry.target.style.transform = "translateX(-50px)";
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0 });
 
 var googledevicon = document.getElementById('googledev');
 
@@ -154,22 +154,21 @@ function adjustColumnWidth() {
   var columnElements = document.querySelectorAll('.column');
 
   columnElements.forEach(function(column) {
-    if (viewportWidth >= 1400) {
-      column.style.flex = '0 0 55%';
-      column.style.maxWidth = '55%';
+    if (viewportWidth >= 1000) {
+      column.style.flex = '0 0 850px';
+      column.style.maxWidth = '850px';
     } else if (viewportWidth <= 768) {
       column.style.flex = '0 0 100%';
-      column.style.maxWidth = '100%';
+      column.style.maxWidth = '720px';
     } else {
-      var percentage = 55 + (1400 - viewportWidth) * (35 / 600);
-      column.style.flex = '0 0 ' + percentage + '%';
-      column.style.maxWidth = percentage + '%';
+      var percentage = 720 /*width below 768px*/ + (viewportWidth - 768) * 130 /*900-720*/ / 182 /*1000-768*/;
+      column.style.flex = '0 0 ' + percentage + 'px';
+      column.style.maxWidth = percentage + 'px';
     }
   });
 }
 
 adjustColumnWidth();
-
 
 let homeContent = `<h2>About Me</h2>
     <p>As a detail-oriented and versatile software developer, I have honed my skills in both the development and testing phases of web and mobile applications. With a proven background in QA, my testing expertise spans across multiple testing frameworks including RSpec, Widget Tester Jest and etc; my development expertise spans across mobile development (Kotlin, Flutter) and Web development (Javascript, Typescript, Ruby and etc).   
@@ -246,16 +245,16 @@ let softContent = `<h2 id='softh2'>Software Proficiency</h2>
     <li><u>Integrated Development Environments (IDEs):</u><ul>Visual Studio Code, IntelliJ IDEA, Android Studio</ul></li>
     <li><u>Version Control Systems (VCS):</u><ul>Git (Platforms: GitHub, GitLab, Bitbucket)</ul></li>
   </ul>
-  </div>
   <hr>
+  </div>
   <div class="section">
   <h3>Design and Database Management</h3>
   <ul>
     <li><u>Prototype tools:</u><ul>Figma, Adobe XD, Sketch</ul></li>
     <li><u>Databases and Database Tools:</u><ul>MySQL, MariaDB, Redis, DB Browser, SQL, SQLite, PostgreSQL, pgAdmin, phpMyAdmin</ul></li>
   </ul>
-  </div>
   <hr>
+  </div>
   <div class="section">
   <h3>Command Line, Build Tools, and API Testing</h3>
   <ul>
@@ -263,8 +262,8 @@ let softContent = `<h2 id='softh2'>Software Proficiency</h2>
     <li><u>Build Tools and Package Managers:</u><ul>npm, Yarn, Webpack, Gradle, Maven, Rake</ul></li>
     <li><u>API Testing Tools:</u><ul>Postman</ul></li>
   </ul>
-  </div>
   <hr>
+  </div>
   <div class="section">
   <h3>Containerization, Cloud, and Continuous Integration</h3>
   <ul>
