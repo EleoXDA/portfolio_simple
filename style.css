@@ -7,6 +7,8 @@
   --color-button-text-light: #F2F2F2;
   --color-button-dark: #999999;
   --color-button-text-dark: #232323;
+  --color-light: #000000;
+  --color-dark: #FFFFFF;
   --color-light-transparent: rgba(0,0,0,0.1);
   --color-dark-transparent: rgba(255, 255, 255, 0.1);
 }
@@ -51,6 +53,7 @@ html {
   color: var(--color-button-text-light);
   text-decoration: none;
   font-family: 'Arima', cursive;
+  text-shadow: var(--color-light) 0px 0px 10px;
 }
 
 .column {

@@ -26,6 +26,7 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
     root.style.setProperty('--color-button-light', '#999999');
     root.style.setProperty('--color-button-text-light', '#000000');
     root.style.setProperty('--color-light-transparent', '#rgba(100,100,100,0.1)');
+    root.style.setProperty('--color-light', '#FFFFFF');
     themeToggleImage.src = "images/lamp_on.png";
     profile.src = "images/profpicd.png";
     setTimeout(function(){
@@ -38,6 +39,7 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
       root.style.setProperty('--color-button-light', '#a5a5a5');
       root.style.setProperty('--color-button-text-light', '#F2F2F2');
       root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.1)');
+      root.style.setProperty('--color-light', '#000000');
       themeToggleImage.src = "images/lamp_on2.png";
       profile.src = "images/profpicb.png";
     }, 500)
@@ -80,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
       root.style.setProperty('--color-button-light', '#999999');
       root.style.setProperty('--color-button-text-light', '#000000');
       root.style.setProperty('--color-light-transparent', '#rgba(100,100,100,0.1)');
+      root.style.setProperty('--color-light', '#FFFFFF');
       themeToggleImage.src = "images/lamp_off.png";
       profile.src = "images/profpicd.png";
   } else {
@@ -89,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
       root.style.setProperty('--color-button-light', '#a5a5a5');
       root.style.setProperty('--color-button-text-light', '#F2F2F2');
       root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.1)');
+      root.style.setProperty('--color-light', '#000000');
       themeToggleImage.src = "images/lamp_on2.png";
       profile.src = "images/profpicb.png";
   }
