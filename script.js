@@ -109,7 +109,7 @@ let observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 
-var googledevicon = document.getElementById('fa-code');
+var googledevicon = document.getElementById('googledev');
 
 googledevicon.addEventListener('mouseover', function() {
   googledevicon.src = "images/google-developers.png";
@@ -118,6 +118,27 @@ googledevicon.addEventListener('mouseover', function() {
 googledevicon.addEventListener('mouseout', function() {
   googledevicon.src = "images/google-developers-muted.png";
 });
+
+var xdaicon = document.getElementById('xda');
+
+xdaicon.addEventListener('mouseover', function() {
+  xdaicon.src = "images/xda.png";
+});
+
+xdaicon.addEventListener('mouseout', function() {
+  xdaicon.src = "images/xda-muted.png";
+});
+
+var codewarsicon = document.getElementById('codewars');
+
+codewarsicon.addEventListener('mouseover', function() {
+  codewarsicon.src = "images/codewars.png";
+});
+
+codewarsicon.addEventListener('mouseout', function() {
+  codewarsicon.src = "images/codewars-muted.png";
+});
+
 
 document.querySelectorAll('.column').forEach(section => {
   section.style.opacity = "0";
