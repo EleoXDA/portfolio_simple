@@ -161,7 +161,7 @@ function adjustColumnWidth() {
       column.style.flex = '0 0 100%';
       column.style.maxWidth = '720px';
     } else {
-      var percentage = 720 /*width below 768px*/ + (viewportWidth - 768) * 130 /*900-720*/ / 182 /*1000-768*/;
+      var percentage = 720 /*width below 768px*/ + (viewportWidth - 768) * 130 /*900-720*/ / 232 /*1000-768*/;
       column.style.flex = '0 0 ' + percentage + 'px';
       column.style.maxWidth = percentage + 'px';
     }
