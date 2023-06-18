@@ -343,6 +343,15 @@ let projects = `<h2>Projects</h2>
     <a href="https://github.com/EleoXDA/Tip_Calculator_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
     <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages</h6>
     </div>
+</div>
+<hr>
+<div class="project-container">
+  <button class="project button"><a href="https://www.elbaymalik.site" style="text-decoration: none;" target="_blank"><h3 class="project-name">My Portfolio Website</h3></a></button>
+  <div class="project-description">
+    <p>Here you can find the source code to this beautiful and responsive wesbite that I prepared for my portfolio.
+    <a href="https://github.com/EleoXDA/portfolio" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
+    <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Javascript, GitHub Actions, GitHub Pages, Web Hosting</h6>
+    </div>
 </div>`
 document.getElementById('projects').innerHTML = projects;
 
