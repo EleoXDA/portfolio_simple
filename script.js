@@ -25,7 +25,7 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
     root.style.setProperty('--color-text-light', '#F2F2F2');
     root.style.setProperty('--color-button-light', '#999999');
     root.style.setProperty('--color-button-text-light', '#000000');
-    root.style.setProperty('--color-light-transparent', 'rgba(256,256,256, 0.2)');
+    root.style.setProperty('--color-light-transparent', 'rgba(256,256,256,0.3)');
     root.style.setProperty('--color-light', '#FFFFFF');
     themeToggleImage.src = "images/lamp_on.png";
     profile.src = "images/profpicd.png";
@@ -38,7 +38,7 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
       root.style.setProperty('--color-text-light', '#000000');
       root.style.setProperty('--color-button-light', '#a5a5a5');
       root.style.setProperty('--color-button-text-light', '#F2F2F2');
-      root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.1)');
+      root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.3)');
       root.style.setProperty('--color-light', '#000000');
       themeToggleImage.src = "images/lamp_on2.png";
       profile.src = "images/profpicb.png";
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
       root.style.setProperty('--color-text-light', '#F2F2F2');
       root.style.setProperty('--color-button-light', '#999999');
       root.style.setProperty('--color-button-text-light', '#000000');
-      root.style.setProperty('--color-light-transparent', 'rgba(256,256,256, 0.2)');
+      root.style.setProperty('--color-light-transparent', 'rgba(256,256,256,0.3)');
       root.style.setProperty('--color-light', '#FFFFFF');
       themeToggleImage.src = "images/lamp_off.png";
       profile.src = "images/profpicd.png";
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
       root.style.setProperty('--color-text-light', '#000000');
       root.style.setProperty('--color-button-light', '#a5a5a5');
       root.style.setProperty('--color-button-text-light', '#F2F2F2');
-      root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.1)');
+      root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.3)');
       root.style.setProperty('--color-light', '#000000');
       themeToggleImage.src = "images/lamp_on2.png";
       profile.src = "images/profpicb.png";
@@ -346,72 +346,47 @@ let projects = `<h2>Projects</h2>
 </div>`
 document.getElementById('projects').innerHTML = projects;
 
-let skills = `<h2>Skills and Tools</h2>
-<div>
+let skills = `<div>
 <table>
   <thead>
     <tr>
-      <th colspan="7">Languages</th>
+      <th>Languages and Frameworks</th>
     </tr>
   </thead>
   <tbody>
-  <tr>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"/><br>JavaScript</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/><br>CSS</td>
+   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"/><br>Bootstrap</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/><br>HTML</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/><br>Typescript</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/><br>Node. JS</td>
    <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"/><br>Vue. JS</td>
    <td><img src="images/react.svg"/><br>React. JS</td>
-  </tr>
-  <tr>
+   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg"/><br>Svelte</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"/><br>Dart</td>
+   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"/><br>Flutter</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"/><br>Kotlin</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg"/><br>Ruby</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"/><br>SQLite</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"/><br>PostgreSQL</td>
-   <td><img src="images/bash.svg"/><br>Bash</td>
-   <td><img src="images/markdown.svg"/><br>Markdown</td>
-  </tr>
-  </tbody>
-</table>
-</div>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="7">Frameworks</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg"/><br>Svelte</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"/><br>Flutter</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg"/><br>Rails</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"/><br>Bootstrap</td>
-   <td><img src="images/scrum.svg"/><br>Scrum</td>
-   <td><img src="https://user-images.githubusercontent.com/27622683/192119213-9a958b20-d3ba-460e-935f-dccb6a3de7e6.png"/><br>Kanban</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"/><br>Jira</td>
-  </tr>
+   <td><img src="images/php.svg"/><br>PHP</td>
+   <td><img src="images/yii.svg"/><br>Yii</td>
+   <td><img src="images/mongodb.svg"/><br>MongoDB</td>
+   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"/><br>PostgreSQL</td>
   </tbody>
 </table>
 <table>
   <thead>
     <tr>
-      <th colspan="7">Tools</th>
+      <th>Tools and Software</th>
     </tr>
   </thead>
   <tbody>
-  <tr>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg"/><br>WebPack</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg"/><br>Heroku</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/><br>Figma</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rspec/rspec-original.svg"/><br>RSpec</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/><br>Git</td>
-   <td><img src="images/github.svg"/><br>GitHub</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"/><br>GitLab</td>
-  </tr>
-  <tr>
+  <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg"/><br>WebPack</td>
+  <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg"/><br>Heroku</td>
+  <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/><br>Figma</td>
+  <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/><br>Git</td>
+  <td><img src="images/github.svg"/><br>GitHub</td>
+  <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"/><br>GitLab</td>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"/><br>Android Studio</td>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"/><br>IntelliJ</td>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/><br>VSCode</td>
@@ -419,33 +394,37 @@ let skills = `<h2>Skills and Tools</h2>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg"/><br>Vim</td>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"/><br>Google Cloud</td>
   <td><img src="images/codepen.svg"/><br>CodePen</td>
-</tr>
-<tr>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/><br>Docker</td>
+  <td><img src="images/postman.svg"/><br>Postman</td>
+  <td><img src="images/xampp.svg"/><br>XAMPP</td>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg"/><br>ESLint</td>
   <td><img src="images/gradle.svg"/><br>Gradle</td>
   <td><img src="images/jenkins.svg"/><br>Jenkins</td>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetbrains/jetbrains-original.svg"/><br>JetBrains</td>
+  <td><img src="images/scrum.svg"/><br>Scrum</td>
+  <td><img src="https://user-images.githubusercontent.com/27622683/192119213-9a958b20-d3ba-460e-935f-dccb6a3de7e6.png"/><br>Kanban</td>
   <td><img src="images/tdd.png"/><br>T.D.D.</td>
+  <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"/><br>Jira</td>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg"/><br>Yarn</td>
-</tr>
+  <td><img src="images/bash.svg"/><br>Bash</td>
+  <td><img src="images/markdown.svg"/><br>Markdown</td>
 </tbody>
 </table>
 <table>
   <thead>
     <tr>
-      <th colspan="7">Operating Systems</th>
+      <th>Operating Systems</th>
     </tr>
   </thead>
-  <tr>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"/><br>Windows</td>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"/><br>Linux</td>
-  <td><img height=70 src="images/mac.svg"/><br>MacOS</td>
+  <td><img src="images/mac.svg"/><br>MacOS</td>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"/><br>Android</td>
   <td><img src="images/ios.svg"/><br>iOS</td>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg"/><br>Ubuntu</td>
+  <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-plain.svg"/><br>Debian</td>
+  <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fedora/fedora-plain.svg"/><br>Fedora</td>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg"/><br>ChromeOS</td>
-</tr>
 </tbody>
 </table>
 </div>`
