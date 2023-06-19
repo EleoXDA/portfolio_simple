@@ -4,7 +4,7 @@ function handleClick(e, contentId) {
 }
 
 function showContent(contentId) {
-  var contentElements = document.getElementsByClassName("content");
+  const contentElements = document.getElementsByClassName("content");
   for(var i = 0; i < contentElements.length; i++) {
       if(contentElements[i].id === contentId) {
           contentElements[i].style.display = "block";
@@ -13,6 +13,37 @@ function showContent(contentId) {
       }
   }
   localStorage.setItem('contentId', contentId);
+}
+
+function adjustColumnWidth() {
+  const viewportWidth = window.innerWidth;
+  const columnElements = document.querySelectorAll('.column');
+
+  columnElements.forEach(function(column) {
+    if (viewportWidth >= 1000) {
+      column.style.flex = '0 0 850px';
+      column.style.maxWidth = '850px';
+    } else if (viewportWidth <= 768) {
+      column.style.flex = '0 0 100%';
+      column.style.maxWidth = '720px';
+    } else {
+      const percentage = 720 /*width below 768px*/ + (viewportWidth - 768) * 130 /*900-720*/ / 232 /*1000-768*/;
+      column.style.flex = '0 0 ' + percentage + 'px';
+      column.style.maxWidth = percentage + 'px';
+    }
+  });
+}
+
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    document.getElementById("back-to-top").style.display = "block";
+  } else {
+    document.getElementById("back-to-top").style.display = "none";
+  }
+}
+
+function topFunction() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
 document.getElementById('theme-toggle-img').addEventListener('click', function() {
@@ -113,9 +144,9 @@ let observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0 });
 
-var googledevicon = document.getElementById('googledev');
-var xdaicon = document.getElementById('xda');
-var codewarsicon = document.getElementById('codewars');
+const googledevicon = document.getElementById('googledev');
+const xdaicon = document.getElementById('xda');
+const codewarsicon = document.getElementById('codewars');
 
 googledevicon.addEventListener('mouseover', function() {
   googledevicon.src = "images/google-developers.png";
@@ -150,25 +181,6 @@ document.querySelectorAll('.column').forEach(section => {
 
 window.addEventListener('resize', adjustColumnWidth);
 
-function adjustColumnWidth() {
-  var viewportWidth = window.innerWidth;
-  var columnElements = document.querySelectorAll('.column');
-
-  columnElements.forEach(function(column) {
-    if (viewportWidth >= 1000) {
-      column.style.flex = '0 0 850px';
-      column.style.maxWidth = '850px';
-    } else if (viewportWidth <= 768) {
-      column.style.flex = '0 0 100%';
-      column.style.maxWidth = '720px';
-    } else {
-      var percentage = 720 /*width below 768px*/ + (viewportWidth - 768) * 130 /*900-720*/ / 232 /*1000-768*/;
-      column.style.flex = '0 0 ' + percentage + 'px';
-      column.style.maxWidth = percentage + 'px';
-    }
-  });
-}
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -181,19 +193,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    document.getElementById("back-to-top").style.display = "block";
-  } else {
-    document.getElementById("back-to-top").style.display = "none";
-  }
-}
-
-function topFunction() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
-}
-
-
 adjustColumnWidth();
 
 let homeContent = `<h2>About Me</h2>
@@ -203,7 +202,6 @@ let homeContent = `<h2>About Me</h2>
     </p><hr><p>In summary, my career journey has been characterized by continuous learning, versatility, and a commitment to excellence. With my extensive skills in software development, testing, and project management, I am eager to contribute to a new position, where I can continue to ensure the delivery of high-quality software solutions.
     </p>`;
 document.getElementById('home').innerHTML = homeContent;
-
 
 let experienceContent = `<h2>Experience</h2>
 <div>
