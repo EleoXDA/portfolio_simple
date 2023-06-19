@@ -130,6 +130,7 @@ th, td {
 
 th {
   margin-top: 20px;
+  margin-bottom: 5px;
   font-size: 15px;
   border: 0.1px solid var(--color-light-transparent);
   box-shadow: 1px 1px 5px var(--color-light-transparent);
