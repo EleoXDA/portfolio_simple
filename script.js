@@ -114,6 +114,8 @@ let observer = new IntersectionObserver(entries => {
 }, { threshold: 0 });
 
 var googledevicon = document.getElementById('googledev');
+var xdaicon = document.getElementById('xda');
+var codewarsicon = document.getElementById('codewars');
 
 googledevicon.addEventListener('mouseover', function() {
   googledevicon.src = "images/google-developers.png";
@@ -123,8 +125,6 @@ googledevicon.addEventListener('mouseout', function() {
   googledevicon.src = "images/google-developers-muted.png";
 });
 
-var xdaicon = document.getElementById('xda');
-
 xdaicon.addEventListener('mouseover', function() {
   xdaicon.src = "images/xda.png";
 });
@@ -133,8 +133,6 @@ xdaicon.addEventListener('mouseout', function() {
   xdaicon.src = "images/xda-muted.png";
 });
 
-var codewarsicon = document.getElementById('codewars');
-
 codewarsicon.addEventListener('mouseover', function() {
   codewarsicon.src = "images/codewars.png";
 });
@@ -142,7 +140,6 @@ codewarsicon.addEventListener('mouseover', function() {
 codewarsicon.addEventListener('mouseout', function() {
   codewarsicon.src = "images/codewars-muted.png";
 });
-
 
 document.querySelectorAll('.column').forEach(section => {
   section.style.opacity = "0";
@@ -171,6 +168,31 @@ function adjustColumnWidth() {
     }
   });
 }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    document.getElementById("back-to-top").style.display = "block";
+  } else {
+    document.getElementById("back-to-top").style.display = "none";
+  }
+}
+
+function topFunction() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
 
 adjustColumnWidth();
 
