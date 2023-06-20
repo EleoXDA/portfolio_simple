@@ -18,18 +18,25 @@ function showContent(contentId) {
 function adjustColumnWidth() {
   const viewportWidth = window.innerWidth;
   const columnElements = document.querySelectorAll('.column');
+  const modalContent = document.querySelector('.modal-content');
 
   columnElements.forEach(function(column) {
     if (viewportWidth >= 1000) {
       column.style.flex = '0 0 850px';
       column.style.maxWidth = '850px';
+      modalContent.style.width = '750px';
+      modalContent.style.maxWidth = '750px';
     } else if (viewportWidth <= 768) {
       column.style.flex = '0 0 100%';
       column.style.maxWidth = '720px';
+      modalContent.style.flex = '0 0 90%';
+      modalContent.style.maxWidth = '720px';
     } else {
       const percentage = 720 /*width below 768px*/ + (viewportWidth - 768) * 130 /*900-720*/ / 232 /*1000-768*/;
       column.style.flex = '0 0 ' + percentage + 'px';
       column.style.maxWidth = percentage + 'px';
+      modalContent.style.width = percentage - 100 + 'px';
+      modalContent.style.maxWidth = percentage - 100 + 'px';
     }
   });
 }
@@ -188,6 +195,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+let modal = document.getElementById("myModal");
+let btns = document.querySelectorAll(".project.button");
+let span = document.getElementsByClassName("close")[0];
+let projectLinkBtn = document.getElementById("project-link-btn");
+let readmeContent = document.getElementById("readme-content");
+
+document.body.addEventListener('click', function(e) {
+  const btn = e.target.closest(".project.button");
+  if(btn) {
+    modal.style.display = "block";
+    projectLinkBtn.href = btn.dataset.projectLink;
+    fetchReadme(btn.dataset.projectLink);
+    projectLinkBtn.onclick = function() {
+      window.open(this.href);
+    }
+  }
+});
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+let converter = new showdown.Converter();
+
+function fetchReadme(projectLink) {
+  let parts = projectLink.split('/');
+  let projectName = parts[parts.length - 2];
+  let branch = projectName === "portfolio" ? "gh-pages" : "master";
+  let url = `https://raw.githubusercontent.com/EleoXDA/${projectName}/${branch}/README.md`;
+
+  fetch(url)
+    .then(response => response.text())
+    .then(data => {
+      let html = converter.makeHtml(data); // This line converts markdown to HTML
+      readmeContent.innerHTML = html;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      readmeContent.innerHTML = "Error loading README";
+    });
+}
+
 window.onscroll = function() {scrollFunction()};
 
 adjustColumnWidth();
@@ -309,7 +364,7 @@ document.getElementById('lang').innerHTML = langContent;
 
 let projects = `<h2>Projects</h2>
 <div class="project-container">
-  <button class="project button"><a href="https://eleoxda.github.io/Ace_Hunter_JS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Ace Hunter</h3></a></button>
+  <button class="project button" data-project-link="https://eleoxda.github.io/Ace_Hunter_JS/"><h3 class="project-name">Ace Hunter</h3></button>
   <div class="project-description">
     <p> JavaScript card game to find the Ace of Spades card among four cards.
       <a href="https://github.com/EleoXDA/Ace_Hunter_JS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
@@ -318,7 +373,7 @@ let projects = `<h2>Projects</h2>
 </div>
 <hr>
 <div class="project-container">
-  <button class="project button"><a href="https://eleoxda.github.io/Quiz_TS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Simple Quiz</h3></a></button>
+  <button class="project button" data-project-link="https://eleoxda.github.io/Quiz_TS/"><h3 class="project-name">Simple Quiz</h3></button>
   <div class="project-description">
     <p>A  Quiz app that randomizes 5 questions and gives you score after quiz is finished.
     <a href="https://github.com/EleoXDA/Quiz_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
@@ -327,7 +382,7 @@ let projects = `<h2>Projects</h2>
 </div>
 <hr>
 <div class="project-container">
-  <button class="project button"><a href="https://eleoxda.github.io/Countdown_Timer_TS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Countdown Timer</h3></a></button>
+  <button class="project button" data-project-link="https://eleoxda.github.io/Countdown_Timer_TS/"><h3 class="project-name">Countdown Timer</h3></button>
   <div class="project-description">
     <p>An intuitive and user-friendly countdown timer that persists across browser.
     <a href="https://github.com/EleoXDA/Countdown_Timer_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
@@ -336,7 +391,7 @@ let projects = `<h2>Projects</h2>
 </div>
 <hr>
 <div class="project-container">
-  <button class="project button"><a href="https://eleoxda.github.io/Calculator_TS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Calculator</h3></a></button>
+  <button class="project button" data-project-link="https://eleoxda.github.io/Calculator_TS/"><h3 class="project-name">Calculator</h3></button>
   <div class="project-description">
     <p>A calculator app without scientific functions that has theme options.
     <a href="https://github.com/EleoXDA/Calculator_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
@@ -345,7 +400,7 @@ let projects = `<h2>Projects</h2>
 </div>
 <hr>
 <div class="project-container">
-  <button class="project button"><a href="https://eleoxda.github.io/Expense_Tracker_TS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Expense Tracker</h3></a></button>
+  <button class="project button" data-project-link="https://eleoxda.github.io/Expense_Tracker_TS/"><h3 class="project-name">Expense Tracker</h3></button>
   <div class="project-description">
     <p>A user-friendly web application that allows users to track their income and expenses.
     <a href="https://github.com/EleoXDA/Socialize_RB" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
@@ -354,7 +409,7 @@ let projects = `<h2>Projects</h2>
 </div>
 <hr>
 <div class="project-container">
-  <button class="project button"><a href="https://eleoxda.github.io/Tip_Calculator_TS/" style="text-decoration: none;" target="_blank"><h3 class="project-name">Tip Calculator</h3></a></button>
+  <button class="project button" data-project-link="https://eleoxda.github.io/Tip_Calculator_TS/"><h3 class="project-name">Tip Calculator</h3></button>
   <div class="project-description">
     <p>An interactive tip calculator web application that allows users to input their bill amount, select the desired tip percentage, and choose their currency.
     <a href="https://github.com/EleoXDA/Tip_Calculator_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
@@ -363,8 +418,8 @@ let projects = `<h2>Projects</h2>
 </div>
 <hr>
 <div class="project-container">
-  <button class="project button"><a href="https://www.elbaymalik.site" style="text-decoration: none;" target="_blank"><h3 class="project-name">My Portfolio Website</h3></a></button>
-  <div class="project-description">
+<button class="project button" data-project-link="https://eleoxda.github.io/portfolio/"><h3 class="project-name">My Portfolio Website</h3></button>
+<div class="project-description">
     <p>Here you can find the source code to this beautiful and responsive wesbite that I prepared for my portfolio.
     <a href="https://github.com/EleoXDA/portfolio" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
     <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Javascript, GitHub Actions, GitHub Pages, Web Hosting</h6>
@@ -383,14 +438,14 @@ let skills = `<h2 id='softh2'>Skills and Tools</h2>
   </thead>
   <tbody>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"/><br>JavaScript</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/><br>CSS</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"/><br>Bootstrap</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/><br>HTML</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/><br>Typescript</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/><br>Node. JS</td>
    <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"/><br>Vue. JS</td>
    <td><img src="images/react.svg"/><br>React. JS</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg"/><br>Svelte</td>
+   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/><br>CSS</td>
+   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"/><br>Bootstrap</td>
+   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/><br>HTML</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"/><br>Dart</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"/><br>Flutter</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"/><br>Kotlin</td>
