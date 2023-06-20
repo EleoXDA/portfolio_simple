@@ -18,10 +18,20 @@ html {
   background: #555;
 }
 
-.navbar-brand, .navbar-brand-muted, #contact-me-text {
+.navbar-brand, .navbar-brand-muted, #find-me-text {
   font-weight: bold;
   text-align: center;
   margin: 0;
+  padding: 0;
+}
+
+#contact-me-text {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
   padding: 0;
 }
 
@@ -30,7 +40,7 @@ html {
 }
 
 .navbar-brand-muted{
-  color: #999999;
+  color: var(--color-button);
   font-weight: 500;
 }
 
@@ -39,7 +49,7 @@ html {
   text-decoration: none;
   font-family: 'Arima', cursive;
   text-shadow: var(--color) 0px 0px 10px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .column {
@@ -101,7 +111,7 @@ button {
 }
 
 button:hover {
-  background-color: #666666;
+  background-color: var(--color-text);
 }
 
 h1, h2, h3, h4, h5, h6, p, ul {
@@ -120,26 +130,29 @@ h6, p, ul { font-size: 14px; }
 table {
   margin: 0px auto; 
   text-align: center;
-  font-size: 0.65em;
+  font-size: 0.846em;
   font-family: 'Arima', cursive;
-}
-
-th, td {
-  padding: 5px;
-  border-radius: 15px;
 }
 
 th {
   margin-top: 20px;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 16px;
+  padding: 0px;
+  border-radius: 15px;
+  text-decoration: underline;
 }
 
 td {
-  border: 0.1px dashed var(--color-transparent);
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-top: 7px;
+  padding-bottom: 0px;
+  margin-bottom: 20px;
+  border-radius: 15px;
   flex: 0 1 auto;
-  width: 70px;
-  margin: 1px;
+  width: 89.5px;
+  height: 89.5px;
 }
 
 tr {
@@ -282,7 +295,7 @@ hr {
 }
 
 .fa-github, .fa-linkedin-in, .mail {
-  color: darkgray;
+  color: var(--color-button);
 }
 
 .fa-github:hover { color: var(--color-text); }
