@@ -57,16 +57,22 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
   let root = document.documentElement;
   let themeToggleImage = document.getElementById('theme-toggle-img');
   let profile = document.getElementById('profpic');
+  let xdaicon = document.getElementById('xda');
+  let codewarsicon = document.getElementById('codewars');
+  let googledevicon = document.getElementById('googledev');
   let bgColor = getComputedStyle(root).getPropertyValue('--color-background');
   if (bgColor.trim() == '#F2F2F2') {
     root.style.setProperty('--color', '#FFFFFF');
     root.style.setProperty('--color-background', '#000000');
     root.style.setProperty('--color-text', '#F2F2F2');
-    root.style.setProperty('--color-button', '#999999');
+    root.style.setProperty('--color-button', '#a9a9a9');
     root.style.setProperty('--color-transparent', 'rgba(256,256,256,0.3)');
     root.style.setProperty('--color-button-text-transparent', 'rgba(0,0,0,0.7)');
     themeToggleImage.src = "images/lamp_on.png";
     profile.src = "images/profpicd.png";
+    xdaicon.src = "images/xda-muted.png";
+    codewarsicon.src = "images/codewars-muted.png";
+    googledevicon.src = "images/google-developers-muted.png";
     setTimeout(function(){
       themeToggleImage.src = "images/lamp_off.png";}, 500)
     localStorage.setItem('theme', 'dark');
@@ -75,12 +81,14 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
       root.style.setProperty('--color', '#000000');
       root.style.setProperty('--color-background', '#F2F2F2');
       root.style.setProperty('--color-text', '#000000');
-      root.style.setProperty('--color-button', '#a5a5a5');
+      root.style.setProperty('--color-button', '#888888');
       root.style.setProperty('--color-transparent', 'rgba(0,0,0,0.3)');
       root.style.setProperty('--color-button-text-transparent', 'rgba(256,256,256,0.7)');
       themeToggleImage.src = "images/lamp_on2.png";
       profile.src = "images/profpicb.png";
-    }, 500)
+      xdaicon.src = "images/xda-muted-light.png";
+      codewarsicon.src = "images/codewars-muted-light.png";
+      googledevicon.src = "images/google-developers-muted-light.png";}, 500)
     themeToggleImage.src = "images/lamp_on.png";
     localStorage.setItem('theme', 'light');
   }
@@ -112,27 +120,36 @@ document.addEventListener('DOMContentLoaded', function() {
   let root = document.documentElement;
   let themeToggleImage = document.getElementById('theme-toggle-img');
   let profile = document.getElementById('profpic');
+  let xdaicon = document.getElementById('xda');
+  let codewarsicon = document.getElementById('codewars');
+  let googledevicon = document.getElementById('googledev');
   let contentId = localStorage.getItem('contentId');
   if (theme === 'dark') {
       // Apply dark theme
-      root.style.setProperty('--color', '#FFFFFF');
+      root.style.setProperty('--color', '#F2F2F2');
       root.style.setProperty('--color-background', '#000000');
       root.style.setProperty('--color-text', '#F2F2F2');
-      root.style.setProperty('--color-button', '#999999');
+      root.style.setProperty('--color-button', '#a9a9a9');
       root.style.setProperty('--color-transparent', 'rgba(256,256,256,0.3)');
       root.style.setProperty('--color-button-text-transparent', 'rgba(0,0,0,0.7)');
       themeToggleImage.src = "images/lamp_off.png";
       profile.src = "images/profpicd.png";
+      xdaicon.src = "images/xda-muted.png";
+      codewarsicon.src = "images/codewars-muted.png";
+      googledevicon.src = "images/google-developers-muted.png"
   } else {
       // Apply light theme (or default theme)
       root.style.setProperty('--color', '#000000');
       root.style.setProperty('--color-background', '#F2F2F2');
       root.style.setProperty('--color-text', '#000000');
-      root.style.setProperty('--color-button', '#a5a5a5');
+      root.style.setProperty('--color-button', '#888888');
       root.style.setProperty('--color-transparent', 'rgba(0,0,0,0.3)');
       root.style.setProperty('--color-button-text-transparent', 'rgba(256,256,256,0.7)');
       themeToggleImage.src = "images/lamp_on2.png";
       profile.src = "images/profpicb.png";
+      xdaicon.src = "images/xda-muted-light.png";
+      codewarsicon.src = "images/codewars-muted-light.png";
+      googledevicon.src = "images/google-developers-muted-light.png"
   }
   if (contentId) {
       showContent(contentId);
@@ -164,7 +181,12 @@ googledevicon.addEventListener('mouseover', function() {
 });
 
 googledevicon.addEventListener('mouseout', function() {
-  googledevicon.src = "images/google-developers-muted.png";
+  const theme = localStorage.getItem('theme');
+  if (theme === 'dark') {
+    googledevicon.src = "images/google-developers-muted.png";
+  } else {
+    googledevicon.src = "images/google-developers-muted-light.png";
+  }
 });
 
 xdaicon.addEventListener('mouseover', function() {
@@ -172,7 +194,12 @@ xdaicon.addEventListener('mouseover', function() {
 });
 
 xdaicon.addEventListener('mouseout', function() {
-  xdaicon.src = "images/xda-muted.png";
+  const theme = localStorage.getItem('theme');
+  if (theme === 'dark') {
+    xdaicon.src = "images/xda-muted.png";
+  } else {
+    xdaicon.src = "images/xda-muted-light.png";
+  }
 });
 
 codewarsicon.addEventListener('mouseover', function() {
@@ -180,7 +207,12 @@ codewarsicon.addEventListener('mouseover', function() {
 });
 
 codewarsicon.addEventListener('mouseout', function() {
-  codewarsicon.src = "images/codewars-muted.png";
+  const theme = localStorage.getItem('theme');
+  if (theme === 'dark') {
+    codewarsicon.src = "images/codewars-muted.png";
+  } else {
+    codewarsicon.src = "images/codewars-muted-light.png";
+  }
 });
 
 window.addEventListener('resize', adjustColumnWidth);
@@ -438,7 +470,7 @@ let skills = `<h2 id='softh2'>Skills and Tools</h2>
   </thead>
   <tbody>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"/><br>JavaScript</td>
-   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/><br>Typescript</td>
+   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/><br>TypeScript</td>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/><br>Node. JS</td>
    <td><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg"/><br>Vue. JS</td>
    <td><img src="images/react.svg"/><br>React. JS</td>
@@ -457,6 +489,7 @@ let skills = `<h2 id='softh2'>Skills and Tools</h2>
    <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"/><br>PostgreSQL</td>
   </tbody>
 </table>
+<hr id='softhr'>
 <table>
   <thead>
     <tr>
@@ -493,6 +526,7 @@ let skills = `<h2 id='softh2'>Skills and Tools</h2>
   <td><img src="images/markdown.svg"/><br>Markdown</td>
 </tbody>
 </table>
+<hr id='softhr'>
 <table>
   <thead>
     <tr>
@@ -510,5 +544,6 @@ let skills = `<h2 id='softh2'>Skills and Tools</h2>
   <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg"/><br>ChromeOS</td>
 </tbody>
 </table>
+<hr id='softhr'>
 </div>`
 document.getElementById('skills').innerHTML = skills;
