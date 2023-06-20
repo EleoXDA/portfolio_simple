@@ -50,14 +50,14 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
   let root = document.documentElement;
   let themeToggleImage = document.getElementById('theme-toggle-img');
   let profile = document.getElementById('profpic');
-  let bgColor = getComputedStyle(root).getPropertyValue('--color-background-light');
+  let bgColor = getComputedStyle(root).getPropertyValue('--color-background');
   if (bgColor.trim() == '#F2F2F2') {
-    root.style.setProperty('--color-background-light', '#000000');
-    root.style.setProperty('--color-text-light', '#F2F2F2');
-    root.style.setProperty('--color-button-light', '#999999');
-    root.style.setProperty('--color-button-text-light', '#000000');
-    root.style.setProperty('--color-light-transparent', 'rgba(256,256,256,0.3)');
-    root.style.setProperty('--color-light', '#FFFFFF');
+    root.style.setProperty('--color', '#FFFFFF');
+    root.style.setProperty('--color-background', '#000000');
+    root.style.setProperty('--color-text', '#F2F2F2');
+    root.style.setProperty('--color-button', '#999999');
+    root.style.setProperty('--color-transparent', 'rgba(256,256,256,0.3)');
+    root.style.setProperty('--color-button-text-transparent', 'rgba(0,0,0,0.7)');
     themeToggleImage.src = "images/lamp_on.png";
     profile.src = "images/profpicd.png";
     setTimeout(function(){
@@ -65,12 +65,12 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
     localStorage.setItem('theme', 'dark');
   } else {
     setTimeout(function(){
-      root.style.setProperty('--color-background-light', '#F2F2F2');
-      root.style.setProperty('--color-text-light', '#000000');
-      root.style.setProperty('--color-button-light', '#a5a5a5');
-      root.style.setProperty('--color-button-text-light', '#F2F2F2');
-      root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.3)');
-      root.style.setProperty('--color-light', '#000000');
+      root.style.setProperty('--color', '#000000');
+      root.style.setProperty('--color-background', '#F2F2F2');
+      root.style.setProperty('--color-text', '#000000');
+      root.style.setProperty('--color-button', '#a5a5a5');
+      root.style.setProperty('--color-transparent', 'rgba(0,0,0,0.3)');
+      root.style.setProperty('--color-button-text-transparent', 'rgba(256,256,256,0.7)');
       themeToggleImage.src = "images/lamp_on2.png";
       profile.src = "images/profpicb.png";
     }, 500)
@@ -108,22 +108,22 @@ document.addEventListener('DOMContentLoaded', function() {
   let contentId = localStorage.getItem('contentId');
   if (theme === 'dark') {
       // Apply dark theme
-      root.style.setProperty('--color-background-light', '#000000');
-      root.style.setProperty('--color-text-light', '#F2F2F2');
-      root.style.setProperty('--color-button-light', '#999999');
-      root.style.setProperty('--color-button-text-light', '#000000');
-      root.style.setProperty('--color-light-transparent', 'rgba(256,256,256,0.3)');
-      root.style.setProperty('--color-light', '#FFFFFF');
+      root.style.setProperty('--color', '#FFFFFF');
+      root.style.setProperty('--color-background', '#000000');
+      root.style.setProperty('--color-text', '#F2F2F2');
+      root.style.setProperty('--color-button', '#999999');
+      root.style.setProperty('--color-transparent', 'rgba(256,256,256,0.3)');
+      root.style.setProperty('--color-button-text-transparent', 'rgba(0,0,0,0.7)');
       themeToggleImage.src = "images/lamp_off.png";
       profile.src = "images/profpicd.png";
   } else {
       // Apply light theme (or default theme)
-      root.style.setProperty('--color-background-light', '#F2F2F2');
-      root.style.setProperty('--color-text-light', '#000000');
-      root.style.setProperty('--color-button-light', '#a5a5a5');
-      root.style.setProperty('--color-button-text-light', '#F2F2F2');
-      root.style.setProperty('--color-light-transparent', 'rgba(0,0,0,0.3)');
-      root.style.setProperty('--color-light', '#000000');
+      root.style.setProperty('--color', '#000000');
+      root.style.setProperty('--color-background', '#F2F2F2');
+      root.style.setProperty('--color-text', '#000000');
+      root.style.setProperty('--color-button', '#a5a5a5');
+      root.style.setProperty('--color-transparent', 'rgba(0,0,0,0.3)');
+      root.style.setProperty('--color-button-text-transparent', 'rgba(256,256,256,0.7)');
       themeToggleImage.src = "images/lamp_on2.png";
       profile.src = "images/profpicb.png";
   }
@@ -136,13 +136,17 @@ let observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateX(0)";
     } else {
       entry.target.style.opacity = "0";
-      entry.target.style.transform = "translateX(-50px)";
     }
   });
 }, { threshold: 0 });
+
+document.querySelectorAll('.column').forEach(section => {
+  section.style.opacity = "0";
+  section.style.transition = "opacity 0.73s ease";
+  observer.observe(section);
+});
 
 const googledevicon = document.getElementById('googledev');
 const xdaicon = document.getElementById('xda');
@@ -172,13 +176,6 @@ codewarsicon.addEventListener('mouseout', function() {
   codewarsicon.src = "images/codewars-muted.png";
 });
 
-document.querySelectorAll('.column').forEach(section => {
-  section.style.opacity = "0";
-  section.style.transform = "translateX(-10px)";
-  section.style.transition = "all 0.1s ease";
-  observer.observe(section);
-});
-
 window.addEventListener('resize', adjustColumnWidth);
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -196,11 +193,11 @@ window.onscroll = function() {scrollFunction()};
 adjustColumnWidth();
 
 let homeContent = `<h2>About Me</h2>
-    <p>As a detail-oriented and versatile software developer, I have honed my skills in both the development and testing phases of web and mobile applications. With a proven background in QA, my testing expertise spans across multiple testing frameworks including RSpec, Widget Tester Jest and etc; my development expertise spans across mobile development (Kotlin, Flutter) and Web development (Javascript, Typescript, Ruby and etc).   
-    </p><hr><p>My pursuit of knowledge and technical skills led me to Le Wagon Coding Bootcamp, a transformative experience that certified me as a Web Developer. This immersive program introduced me to a variety of programming languages, such as Ruby on Rails, JavaScript, and CSS, effectively preparing me for a dynamic career in the tech industry. Upon completion of the bootcamp, I took up a freelance role as a Junior Developer with XDA-Developers, leveraging my newly acquired skills to develop web, Android, and cross-platform applications.
-    </p><hr><p>Furthering my career, I embraced the opportunity to work as a Junior Cross-Platform Developer with koviko GmbH. During this tenure, I spearheaded the development of a German language learning app using Flutter/Dart, demonstrating my ability to work with cross-platform mobile frameworks and languages. Additionally, my role involved using the PHP backend with the Yii framework and performing application testing using Widget Tester, ultimately consolidating my experience in project management and software development.
-    </p><hr><p>In summary, my career journey has been characterized by continuous learning, versatility, and a commitment to excellence. With my extensive skills in software development, testing, and project management, I am eager to contribute to a new position, where I can continue to ensure the delivery of high-quality software solutions.
-    </p>`;
+<p>As a detail-oriented and versatile software developer, I have honed my skills in both the development and testing phases of web and mobile applications. With a proven background in QA, my testing expertise spans across multiple testing frameworks including RSpec, Widget Tester Jest and etc; my development expertise spans across mobile development (Kotlin, Flutter) and Web development (Javascript, Typescript, Ruby and etc).   
+</p><hr><p>My pursuit of knowledge and technical skills led me to Le Wagon Coding Bootcamp, a transformative experience that certified me as a Web Developer. This immersive program introduced me to a variety of programming languages, such as Ruby on Rails, JavaScript, and CSS, effectively preparing me for a dynamic career in the tech industry. Upon completion of the bootcamp, I took up a freelance role as a Junior Developer with XDA-Developers, leveraging my newly acquired skills to develop web, Android, and cross-platform applications.
+</p><hr><p>Furthering my career, I embraced the opportunity to work as a Junior Cross-Platform Developer with koviko GmbH. During this tenure, I spearheaded the development of a German language learning app using Flutter/Dart, demonstrating my ability to work with cross-platform mobile frameworks and languages. Additionally, my role involved using the PHP backend with the Yii framework and performing application testing using Widget Tester, ultimately consolidating my experience in project management and software development.
+</p><hr><p>In summary, my career journey has been characterized by continuous learning, versatility, and a commitment to excellence. With my extensive skills in software development, testing, and project management, I am eager to contribute to a new position, where I can continue to ensure the delivery of high-quality software solutions.
+</p>`;
 document.getElementById('home').innerHTML = homeContent;
 
 let experienceContent = `<h2>Experience</h2>
@@ -375,7 +372,9 @@ let projects = `<h2>Projects</h2>
 </div>`
 document.getElementById('projects').innerHTML = projects;
 
-let skills = `<div>
+let skills = `<h2 id='softh2'>Skills and Tools</h2>
+<hr id='softhr'>
+<div>
 <table>
   <thead>
     <tr>

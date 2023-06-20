@@ -26,7 +26,7 @@ html {
 }
 
 .navbar-brand {
-  color: var(--color-text-light);
+  color: var(--color-text);
 }
 
 .navbar-brand-muted{
@@ -35,22 +35,22 @@ html {
 }
 
 .navbar-shortcuts, button {
-  color: var(--color-button-text-light);
+  color: var(--color-background);
   text-decoration: none;
   font-family: 'Arima', cursive;
-  text-shadow: var(--color-light) 0px 0px 10px;
+  text-shadow: var(--color) 0px 0px 10px;
 }
 
 .column {
-  border: 0px solid var(--color-button-light);
+  border: 0px solid var(--color-button);
   border-radius: 20px;
   padding: 20px;
   margin-top: 20px;
-  box-shadow: 2px 2px 10px var(--color-button-light);
+  box-shadow: 2px 2px 10px var(--color-button);
 }
 
 .profile-picture {
-  box-shadow: 2px 2px 10px var(--color-button-light);
+  box-shadow: 2px 2px 10px var(--color-button);
 }
 
 .navbar-container, .navigation {
@@ -76,18 +76,19 @@ body, .project-name, .hyperlink-in-projects {
 }
 
 body, .hyperlink-in-projects {
-  background-color: var(--color-background-light);
-  color: var(--color-text-light);
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 .project-name {
-  color: var(--color-button-text-light);
+  color: var(--color-background);
   margin: 5px;
 }
 
 button {
   align-items: center;
-  background-color: var(--color-button-light);
+  background-color: var(--color-button);
+  color: var(--color-background);
   border: 0;
   border-radius: 30px;
   box-sizing: border-box;
@@ -123,20 +124,18 @@ table {
 }
 
 th, td {
-  border: 0.1px dashed var(--color-light-transparent);
   padding: 5px;
   border-radius: 15px;
 }
 
 th {
   margin-top: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: 15px;
-  border: 0.1px solid var(--color-light-transparent);
-  box-shadow: 1px 1px 5px var(--color-light-transparent);
 }
 
 td {
+  border: 0.1px dashed var(--color-transparent);
   flex: 0 1 auto;
   width: 70px;
   margin: 1px;
@@ -163,23 +162,24 @@ td img {
 }
 
 #back-to-top {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: rgba(100, 100, 100, 0.25); /* Set a background color */
-  color: var(--color-button-text-light); /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 5px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 15px; /* Increase font size */
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgba(128, 128, 128, 0.55);
+  color: var(--color-button-text-transparent);
+  cursor: pointer; 
+  padding: 5px;
+  border-radius: 10px; 
+  font-size: 15px;
 }
 
 #back-to-top:hover {
-  background-color: rgba(100, 100, 100, 1); /* Set a background color */
+  background-color: rgba(128, 128, 128, 1);
+  color: var(--color-background);
 }
 
 ul {
@@ -194,7 +194,6 @@ ul {
 
 .section {
   break-inside: avoid;
-  /* padding-bottom: 1em; */
 }
 
 .section > h3 {
@@ -265,7 +264,7 @@ ul {
 
 .profile-picture {
   border-radius: 50%;
-  box-shadow: 2px 2px 10px var(--color-button-light);
+  box-shadow: 2px 2px 10px var(--color-button);
 }
 
 .icon-btn, .Linkedin.btn, .xda.btn, .codv.btn, .googledev.btn, .mail {
@@ -278,14 +277,14 @@ ul {
 hr {
   border: none;
   border-top: 2px dashed;
-  border-color: var(--color-light-transparent);
+  border-color: var(--color-transparent);
 }
 
-.fa-github, .codewars, .fa-linkedin-in, .mail {
+.fa-github, .fa-linkedin-in, .mail {
   color: darkgray;
 }
 
-.fa-github:hover { color: var(--color-text-light); }
+.fa-github:hover { color: var(--color-text); }
 .fa-linkedin-in:hover { color: #0077B7; }
 .fa-envelope-open:hover { color: rgb(0, 97, 97); }
 
@@ -320,8 +319,8 @@ hr {
   font-family: Arima, cursive;
   font-size: 11px;
   visibility: hidden;
-  background-color: var(--color-text-light);
-  color: var(--color-button-text-light);
+  background-color: var(--color-text);
+  color: var(--color-background);
   text-align: center;
   padding: 2px;
   border-radius: 6px;
@@ -340,10 +339,10 @@ hr {
 }
 
 .portfolio-sections > div {
-  border: 1px solid var(--color-button-light);
+  border: 1px solid var(--color-button);
   border-radius: 30px;
   padding: 20px;
-  box-shadow: 2px 2px 10px var(--color-button-light);
+  box-shadow: 2px 2px 10px var(--color-button);
 }
 
 .portfolio-sections h3 {
