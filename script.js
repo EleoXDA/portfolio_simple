@@ -24,7 +24,7 @@ function adjustColumnWidth() {
     if (viewportWidth >= 1000) {
       column.style.flex = '0 0 850px';
       column.style.maxWidth = '850px';
-      modalContent.style.width = '750px';
+      modalContent.style.flex = '0 0 750px';
       modalContent.style.maxWidth = '750px';
     } else if (viewportWidth <= 768) {
       column.style.flex = '0 0 100%';
@@ -35,7 +35,7 @@ function adjustColumnWidth() {
       const percentage = 720 /*width below 768px*/ + (viewportWidth - 768) * 130 /*900-720*/ / 232 /*1000-768*/;
       column.style.flex = '0 0 ' + percentage + 'px';
       column.style.maxWidth = percentage + 'px';
-      modalContent.style.width = percentage - 100 + 'px';
+      modalContent.style.flex = '0 0 ' + percentage - 100 + 'px';
       modalContent.style.maxWidth = percentage - 100 + 'px';
     }
   });
