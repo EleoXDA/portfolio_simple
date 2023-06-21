@@ -7,15 +7,15 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f2f2f2;
+  background: var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--color-button);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--color-text);
 }
 
 .navbar-brand, .navbar-brand-muted, #find-me-text {
@@ -135,9 +135,9 @@ table {
 }
 
 th {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 18px;
   padding: 0px;
   border-radius: 15px;
   text-decoration: underline;
@@ -300,7 +300,7 @@ hr {
 
 .fa-github:hover { color: var(--color-text); }
 .fa-linkedin-in:hover { color: #0077B7; }
-.fa-envelope-open:hover { color: rgb(0, 97, 97); }
+.fa-envelope-open:hover { color: rgb(60, 180, 60); }
 
 .googledev:hover, .fa-github:hover, .codewars:hover, .fa-linkedin-in:hover, .xda:hover, .fa-envelope-open:hover {
   transform: scale(1.25);
