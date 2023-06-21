@@ -421,6 +421,19 @@ hr {
   font-weight: 900;
 }
 
+#resume {
+  font-weight: bold;
+  text-decoration:double underline;
+}
+
+.footer p>a {
+  color: var(--color);
+  text-decoration: double underline;
+}
+
+#footer {
+  margin-bottom: 0px;
+}
 
 @media (max-width: 1150px) {
   .navigation {
