@@ -78,8 +78,13 @@
     <button onclick="topFunction()" id="back-to-top" title="Go to top">Scroll Up</button>
     <div id="myModal" class="modal">
       <div class="modal-content">
-        <span class="close" style="cursor: pointer;"><i class="fa-regular fa-circle-xmark"></i></span>
-        <br><button id="project-link-btn">Open Project</button>
+        <div class="modal-header">
+          <div class="button-group">
+            <button class="modalbtn" id="project-link-btn">Open Project</button>
+            <button class="modalbtn" id="repo-link-btn">Link to Repo</button>
+          </div>
+          <span class="close" style="cursor: pointer;"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
         <p id="readme-content"></p>
       </div>
     </div>
