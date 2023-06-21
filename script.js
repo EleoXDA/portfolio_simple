@@ -30,13 +30,13 @@ function adjustColumnWidth() {
       column.style.flex = '0 0 100%';
       column.style.maxWidth = '720px';
       modalContent.style.flex = '0 0 90%';
-      modalContent.style.maxWidth = '720px';
+      modalContent.style.maxWidth = '620px';
     } else {
-      const percentage = 720 /*width below 768px*/ + (viewportWidth - 768) * 130 /*900-720*/ / 232 /*1000-768*/;
-      column.style.flex = '0 0 ' + percentage + 'px';
-      column.style.maxWidth = percentage + 'px';
-      modalContent.style.flex = '0 0 ' + percentage - 100 + 'px';
-      modalContent.style.maxWidth = percentage - 100 + 'px';
+      const width = 720 /*width below 768px*/ + (viewportWidth - 768) * 130 /*900-720*/ / 232 /*1000-768*/;
+      column.style.flex = '0 0 ' + width + 'px';
+      column.style.maxWidth = width + 'px';
+      modalContent.style.flex = '0 0 ' + width - 100 + 'px';
+      modalContent.style.maxWidth = width - 100 + 'px';
     }
   });
 }
