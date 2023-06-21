@@ -231,6 +231,7 @@ let modal = document.getElementById("myModal");
 let btns = document.querySelectorAll(".project.button");
 let span = document.getElementsByClassName("close")[0];
 let projectLinkBtn = document.getElementById("project-link-btn");
+let repoLinkBtn = document.getElementById("repo-link-btn"); // New line
 let readmeContent = document.getElementById("readme-content");
 
 document.body.addEventListener('click', function(e) {
@@ -238,8 +239,22 @@ document.body.addEventListener('click', function(e) {
   if(btn) {
     modal.style.display = "block";
     projectLinkBtn.href = btn.dataset.projectLink;
+    repoLinkBtn.href = btn.dataset.repoLink;
+    let parts = btn.dataset.projectLink.split('/');
+    let projectName = parts[parts.length - 2];
+    let repoUrl = `https://github.com/EleoXDA/${projectName}`;
+    repoLinkBtn.href = repoUrl;
+
+    fetchReadme(btn.dataset.projectLink);
+
+    projectLinkBtn.onclick = function() {
+      window.open(this.href);
+    }
     fetchReadme(btn.dataset.projectLink);
     projectLinkBtn.onclick = function() {
+      window.open(this.href);
+    }
+    repoLinkBtn.onclick = function() {
       window.open(this.href);
     }
   }
@@ -398,63 +413,70 @@ let projects = `<h2>Projects</h2>
 <div class="project-container">
   <button class="project button" data-project-link="https://eleoxda.github.io/Ace_Hunter_JS/"><h3 class="project-name">Ace Hunter</h3></button>
   <div class="project-description">
-    <p> JavaScript card game to find the Ace of Spades card among four cards.
-      <a target="_blank" href="https://github.com/EleoXDA/Ace_Hunter_JS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-      <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Javascript, GitHub Actions, GitHub Pages</h6>
+  <h6 style="font-weight: 500; margin: 1pt;">A card game to find the Ace of Spades card among four cards.
+      <a target="_blank" href="https://github.com/EleoXDA/Ace_Hunter_JS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a>
+      <br>Tech Stack: HTML, CSS, Javascript, GitHub Actions, GitHub Pages
+      <br>For more information on project, code and documentation, please click the button on left side.</h6>
       </div>
 </div>
 <hr>
 <div class="project-container">
-  <button class="project button" data-project-link="https://eleoxda.github.io/Quiz_TS/"><h3 class="project-name">Simple Quiz</h3></button>
+  <button class="project button" data-project-link="https://eleoxda.github.io/Quiz_TS/"><h3 class="project-name">Quiz</h3></button>
   <div class="project-description">
-    <p>A  Quiz app that randomizes 5 questions and gives you score after quiz is finished.
-    <a target="_blank" href="https://github.com/EleoXDA/Quiz_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-  <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages</h6>
+  <h6 style="font-weight: 500; margin: 1pt;">A  Quiz app that asks 5 random questions.
+    <a target="_blank" href="https://github.com/EleoXDA/Quiz_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a>
+    <br>Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages
+    <br>For more information on project, code and documentation, please click the button on left side.</h6>
   </div>
 </div>
 <hr>
 <div class="project-container">
-  <button class="project button" data-project-link="https://eleoxda.github.io/Countdown_Timer_TS/"><h3 class="project-name">Countdown Timer</h3></button>
+  <button class="project button" data-project-link="https://eleoxda.github.io/Countdown_Timer_TS/"><h3 class="project-name">Timer</h3></button>
   <div class="project-description">
-    <p>An intuitive and user-friendly countdown timer that persists across browser.
-    <a target="_blank" href="https://github.com/EleoXDA/Countdown_Timer_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-    <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages</h6>
+  <h6 style="font-weight: 500; margin: 1pt;">A countdown timer app.
+    <a target="_blank" href="https://github.com/EleoXDA/Countdown_Timer_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a>
+    <br>Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages
+    <br>For more information on project, code and documentation, please click the button on left side.</h6>
     </div>
 </div>
 <hr>
 <div class="project-container">
   <button class="project button" data-project-link="https://eleoxda.github.io/Calculator_TS/"><h3 class="project-name">Calculator</h3></button>
   <div class="project-description">
-    <p>A calculator app without scientific functions that has theme options.
-    <a target="_blank" href="https://github.com/EleoXDA/Calculator_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-    <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages</h6>
+  <h6 style="font-weight: 500; margin: 1pt;">A calculator app.
+    <a target="_blank" href="https://github.com/EleoXDA/Calculator_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a>
+    <br>Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages
+    <br>For more information on project, code and documentation, please click the button on left side.</h6>
     </div>
 </div>
 <hr>
 <div class="project-container">
   <button class="project button" data-project-link="https://eleoxda.github.io/Expense_Tracker_TS/"><h3 class="project-name">Expense Tracker</h3></button>
   <div class="project-description">
-    <p>A user-friendly web application that allows users to track their income and expenses.
-    <a target="_blank" href="https://github.com/EleoXDA/Socialize_RB" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-    <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages</h6>
+  <h6 style="font-weight: 500; margin: 1pt;">A budget tracker to count your expenses.
+    <a target="_blank" href="https://github.com/EleoXDA/Socialize_RB" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a>
+    <br>Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages
+    <br>For more information on project, code and documentation, please click the button on left side.</h6>
     </div>
 </div>
 <hr>
 <div class="project-container">
   <button class="project button" data-project-link="https://eleoxda.github.io/Tip_Calculator_TS/"><h3 class="project-name">Tip Calculator</h3></button>
   <div class="project-description">
-    <p>An interactive tip calculator web application that allows users to input their bill amount, select the desired tip percentage, and choose their currency.
-    <a target="_blank" href="https://github.com/EleoXDA/Tip_Calculator_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-    <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages</h6>
+  <h6 style="font-weight: 500; margin: 1pt;">A tip calculator for extreme cases.
+    <a target="_blank" href="https://github.com/EleoXDA/Tip_Calculator_TS" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a>
+    <br>Tech Stack: HTML, CSS, Typescript, Javascript, GitHub Actions, GitHub Pages
+    <br>For more information on project, code and documentation, please click the button on left side.</h6>
     </div>
 </div>
 <hr>
 <div class="project-container">
-<button class="project button" data-project-link="https://eleoxda.github.io/portfolio/"><h3 class="project-name">My Portfolio Website</h3></button>
+<button class="project button" data-project-link="https://eleoxda.github.io/portfolio/"><h3 class="project-name">My Portfolio</h3></button>
 <div class="project-description">
-    <p>Here you can find the source code to this beautiful and responsive wesbite that I prepared for my portfolio.
-    <a target="_blank" href="https://github.com/EleoXDA/portfolio" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a></p>
-    <h6 style="font-weight: 500; margin: 1pt;">Tech Stack: HTML, CSS, Javascript, GitHub Actions, GitHub Pages, Web Hosting</h6>
+<h6 style="font-weight: 500; margin: 1pt;">The source code to this beautiful and responsive wesbite.
+    <a target="_blank" href="https://github.com/EleoXDA/portfolio" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a>
+    <br>Tech Stack: HTML, CSS, Javascript, GitHub Actions, GitHub Pages, Web Hosting
+    <br>For more information on project, code and documentation, please <span style="text-decoration:underline;">click the button on the left side</span>.</h6>
     </div>
 </div>`
 document.getElementById('projects').innerHTML = projects;
