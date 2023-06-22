@@ -22,8 +22,8 @@ th, .navbar-brand, .navbar-brand-muted, #find-me-text, #contact-me-text  { paddi
 .paragraph { margin: 1em 0; }
 .fa-github, .fa-linkedin-in, .mail, .navbar-brand-muted { color: var(--color-button); }
 .navbar-shortcuts, button, .project-name, #back-to-top:hover, .tooltip { color: var(--color-background); }
-.navbar-container, .navigation, .row, tr, .spacer, .top-section, .info, .profile, .icon-row, .contact-row, .project-container, .modal-header, .button-group { display: flex; }.button-group { gap: 10px;}
-button, tr, .top-section, .info, .profile, .icon-row, .contact-row, .project-container, .icon-btn, .Linkedin.btn, .xda.btn, .codv.btn, .googledev.btn, .mail, .modalbtn, .navbar-container, .navigation, .row { align-items: center; }
+.navbar-container, .navigation, .row, tr, .spacer, .top-section, .info, .profile, .icon-row, .contact-row, .project-container, .modal-header, .button-group, #statcounter-text, #footer-group { display: flex; }.button-group { gap: 10px;}
+button, tr, .top-section, .info, .profile, .icon-row, .contact-row, .project-container, .icon-btn, .Linkedin.btn, .xda.btn, .codv.btn, .googledev.btn, .mail, .modalbtn, .navbar-container, .navigation, .row, #statcounter-text { align-items: center; }
 .button-group { gap: 10px; }
 .portfolio-sections h2 { font-weight: 900; }
 .fa-github:hover { color: var(--color-text); }
@@ -43,15 +43,15 @@ button, tr, .top-section, .info, .profile, .icon-row, .contact-row, .project-con
 .theme-toggle, #theme-toggle-img, .navbar-container, .navigation { position: relative; }
 .theme-toggle { display: inline-block; }
 .modalbtn, #back-to-top, .project.button, #theme-toggle-img { cursor: pointer; }
+.modal-header { align-items: flex-start }
+.navbar-brand, .navbar-brand-muted, #find-me-text { margin: 0px; }
+#footer-group, .modal-header, .info { justify-content: space-between; }
 #resume, .footer p>a { text-decoration: double underline; }
 #resume, .navbar-brand, .navbar-brand-muted, #find-me-text, #contact-me-text, #myModal a { font-weight: bold; }
 #back-to-top:hover { background-color: rgba(128, 128, 128, 1); }
 #footer { margin-bottom: 0px; }
 #softh2, #softhr, th, td { margin-bottom: 20px; }
-
-.navbar-brand, .navbar-brand-muted, #find-me-text {
-  margin: 0px;
-}
+#statcounter-digit { zoom: 1.4; }
 
 #contact-me-text {
   margin-top: 15px;
@@ -267,11 +267,6 @@ hr {
   margin: 15% auto; 
   border: 1px solid #888;
   width: 80%; 
-}
-
-.modal-header {
-  justify-content: space-between;
-  align-items: flex-start
 }
 
 #myModal a {
