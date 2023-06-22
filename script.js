@@ -60,6 +60,7 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
   let xdaicon = document.getElementById('xda');
   let codewarsicon = document.getElementById('codewars');
   let googledevicon = document.getElementById('googledev');
+  let statcounterDigit = document.getElementById('statcounter-digit');
   let bgColor = getComputedStyle(root).getPropertyValue('--color-background');
   if (bgColor.trim() == '#F2F2F2') {
     root.style.setProperty('--color', '#FFFFFF');
@@ -72,6 +73,7 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
     profile.src = "images/profpicd.png";
     xdaicon.src = "images/xda-muted.png";
     codewarsicon.src = "images/codewars-muted.png";
+    statcounterDigit.classList.add('negative-image');
     googledevicon.src = "images/google-developers-muted.png";
     setTimeout(function(){
       themeToggleImage.src = "images/lamp_off.png";}, 500)
@@ -88,6 +90,7 @@ document.getElementById('theme-toggle-img').addEventListener('click', function()
       profile.src = "images/profpicb.png";
       xdaicon.src = "images/xda-muted-light.png";
       codewarsicon.src = "images/codewars-muted-light.png";
+      statcounterDigit.classList.remove('negative-image');
       googledevicon.src = "images/google-developers-muted-light.png";}, 500)
     themeToggleImage.src = "images/lamp_on.png";
     localStorage.setItem('theme', 'light');
@@ -123,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let xdaicon = document.getElementById('xda');
   let codewarsicon = document.getElementById('codewars');
   let googledevicon = document.getElementById('googledev');
+  let statcounterDigit = document.getElementById('statcounter-digit');
   let contentId = localStorage.getItem('contentId');
   if (theme === 'dark') {
       // Apply dark theme
@@ -137,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
       xdaicon.src = "images/xda-muted.png";
       codewarsicon.src = "images/codewars-muted.png";
       googledevicon.src = "images/google-developers-muted.png"
+      statcounterDigit.classList.add('negative-image');
   } else {
       // Apply light theme (or default theme)
       root.style.setProperty('--color', '#000000');
@@ -150,6 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
       xdaicon.src = "images/xda-muted-light.png";
       codewarsicon.src = "images/codewars-muted-light.png";
       googledevicon.src = "images/google-developers-muted-light.png"
+      statcounterDigit.classList.remove('negative-image');
   }
   if (contentId) {
       showContent(contentId);

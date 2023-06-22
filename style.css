@@ -52,6 +52,7 @@ button, tr, .top-section, .info, .profile, .icon-row, .contact-row, .project-con
 #footer { margin-bottom: 0px; }
 #softh2, #softhr, th, td { margin-bottom: 20px; }
 #statcounter-digit { zoom: 1.4; }
+.negative-image { filter: invert(100%); }
 
 #contact-me-text {
   margin-top: 15px;
