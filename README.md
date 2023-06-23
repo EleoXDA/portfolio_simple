@@ -2,7 +2,7 @@
     PORTFOLIO Website
 </h1>
 
-Welcome to my portfolio website project! This website showcases my work, skills, and experiences as a [your profession]. Feel free to explore and get in touch with me.
+Welcome to my portfolio website project! This website showcases my work, skills, and experiences as a Web Developer. Feel free to explore and get in touch with me.
 
 ## Table of Contents
 - [About](#about)
@@ -14,7 +14,7 @@ Welcome to my portfolio website project! This website showcases my work, skills,
 - [Contact](#contact)
 
 ## About
-This portfolio website project is designed to showcase my work as a [your profession]. It provides an interactive platform for visitors to learn about my skills, projects, and experiences. The website is built using HTML, CSS, and JavaScript, and it incorporates responsive design principles to ensure optimal viewing across devices.
+This portfolio website project is designed to showcase my work as a Web Developer. It provides an interactive platform for visitors to learn about my skills, projects, and experiences. The website is built using HTML, CSS, and JavaScript, and it incorporates responsive design principles to ensure optimal viewing across devices.
 
 <p align="center">
     <img src="https://github.com/EleoXDA/portfolio/assets/27622683/3cf999d9-fd07-425a-a566-6f40298b2aae">
