@@ -6,13 +6,13 @@ function handleClick(e, contentId) {
 
 // Function to show a specific content element and hide others
 function showContent(contentId) {
-  const contentElements = document.getElementsByClassName("content");
-  for(var i = 0; i < contentElements.length; i++) {
-      if(contentElements[i].id === contentId) {
-          contentElements[i].style.display = "block";
-      } else {
-          contentElements[i].style.display = "none";
-      }
+  const contentElements = document.getElementsByClassName('content');
+  for (var i = 0; i < contentElements.length; i++) {
+    if (contentElements[i].id === contentId) {
+      contentElements[i].style.display = 'block';
+    } else {
+      contentElements[i].style.display = 'none';
+    }
   }
   localStorage.setItem('contentId', contentId);
 }
@@ -23,7 +23,7 @@ function adjustColumnWidth() {
   const columnElements = document.querySelectorAll('.column');
   const modalContent = document.querySelector('.modal-content');
 
-  columnElements.forEach(function(column) {
+  columnElements.forEach(function (column) {
     if (viewportWidth >= 1000) {
       column.style.flex = '0 0 850px';
       column.style.maxWidth = '850px';
@@ -35,7 +35,9 @@ function adjustColumnWidth() {
       modalContent.style.flex = '0 0 90%';
       modalContent.style.maxWidth = '620px';
     } else {
-      const width = 720 /*width below 768px*/ + (viewportWidth - 768) * 130 /*900-720*/ / 232 /*1000-768*/;
+      const width =
+        720 /*width below 768px*/ +
+        ((viewportWidth - 768) * 130) /*900-720*/ / 232; /*1000-768*/
       column.style.flex = '0 0 ' + width + 'px';
       column.style.maxWidth = width + 'px';
       modalContent.style.flex = '0 0 ' + width - 100 + 'px';
@@ -47,83 +49,92 @@ function adjustColumnWidth() {
 // Function to handle scroll event and show/hide the "back to top" button
 function scrollFunction() {
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    document.getElementById("back-to-top").style.display = "block";
+    document.getElementById('back-to-top').style.display = 'block';
   } else {
-    document.getElementById("back-to-top").style.display = "none";
+    document.getElementById('back-to-top').style.display = 'none';
   }
 }
 
 // Function to scroll to the top of the page smoothly
 function topFunction() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Event listener for click on theme toggle image
-document.getElementById('theme-toggle-img').addEventListener('click', function() {
-  // Get necessary elements by ID
-  let root = document.documentElement;
-  let themeToggleImage = document.getElementById('theme-toggle-img');
-  let profile = document.getElementById('profpic');
-  let xdaicon = document.getElementById('xda');
-  let codewarsicon = document.getElementById('codewars');
-  let googledevicon = document.getElementById('googledev');
-  let statcounterDigit = document.getElementById('statcounter-digit');
-  // Get the computed background color
-  let bgColor = getComputedStyle(root).getPropertyValue('--color-background');
-  // Check the current background color and toggle the theme accordingly
-  if (bgColor.trim() == '#F2F2F2') {
-    // Apply dark theme
-    root.style.setProperty('--color', '#FFFFFF');
-    root.style.setProperty('--color-background', '#000000');
-    root.style.setProperty('--color-text', '#F2F2F2');
-    root.style.setProperty('--color-button', '#a9a9a9');
-    root.style.setProperty('--color-transparent', 'rgba(256,256,256,0.3)');
-    root.style.setProperty('--color-button-text-transparent', 'rgba(0,0,0,0.7)');
-    themeToggleImage.src = "images/lamp_on.png";
-    profile.src = "images/profpicd.png";
-    xdaicon.src = "images/xda-muted.png";
-    codewarsicon.src = "images/codewars-muted.png";
-    statcounterDigit.classList.add('negative-image');
-    googledevicon.src = "images/google-developers-muted.png";
-    // Set a timeout to change the theme toggle image back to off after 500ms
-    setTimeout(function(){
-      themeToggleImage.src = "images/lamp_off.png";
-    }, 500)
-    // Store the current theme in localStorage
-    localStorage.setItem('theme', 'dark');
-  } else {
-    // Set a timeout to change the theme toggle image back to on after 500ms
-    setTimeout(function(){
-      root.style.setProperty('--color', '#000000');
-      root.style.setProperty('--color-background', '#F2F2F2');
-      root.style.setProperty('--color-text', '#000000');
-      root.style.setProperty('--color-button', '#888888');
-      root.style.setProperty('--color-transparent', 'rgba(0,0,0,0.3)');
-      root.style.setProperty('--color-button-text-transparent', 'rgba(256,256,256,0.7)');
-      themeToggleImage.src = "images/lamp_on2.png";
-      profile.src = "images/profpicb.png";
-      xdaicon.src = "images/xda-muted-light.png";
-      codewarsicon.src = "images/codewars-muted-light.png";
-      statcounterDigit.classList.remove('negative-image');
-      googledevicon.src = "images/google-developers-muted-light.png";}, 500)
-    themeToggleImage.src = "images/lamp_on.png";
-    // Store the current theme in localStorage
-    localStorage.setItem('theme', 'light');
-  }
-});
+document
+  .getElementById('theme-toggle-img')
+  .addEventListener('click', function () {
+    // Get necessary elements by ID
+    let root = document.documentElement;
+    let themeToggleImage = document.getElementById('theme-toggle-img');
+    let profile = document.getElementById('profpic');
+    let xdaicon = document.getElementById('xda');
+    let codewarsicon = document.getElementById('codewars');
+    let googledevicon = document.getElementById('googledev');
+    let statcounterDigit = document.getElementById('statcounter-digit');
+    // Get the computed background color
+    let bgColor = getComputedStyle(root).getPropertyValue('--color-background');
+    // Check the current background color and toggle the theme accordingly
+    if (bgColor.trim() == '#F2F2F2') {
+      // Apply dark theme
+      root.style.setProperty('--color', '#FFFFFF');
+      root.style.setProperty('--color-background', '#000000');
+      root.style.setProperty('--color-text', '#F2F2F2');
+      root.style.setProperty('--color-button', '#a9a9a9');
+      root.style.setProperty('--color-transparent', 'rgba(256,256,256,0.3)');
+      root.style.setProperty(
+        '--color-button-text-transparent',
+        'rgba(0,0,0,0.7)'
+      );
+      themeToggleImage.src = 'images/lamp_on.png';
+      profile.src = 'images/profpicd.png';
+      xdaicon.src = 'images/xda-muted.png';
+      codewarsicon.src = 'images/codewars-muted.png';
+      statcounterDigit.classList.add('negative-image');
+      googledevicon.src = 'images/google-developers-muted.png';
+      // Set a timeout to change the theme toggle image back to off after 500ms
+      setTimeout(function () {
+        themeToggleImage.src = 'images/lamp_off.png';
+      }, 500);
+      // Store the current theme in localStorage
+      localStorage.setItem('theme', 'dark');
+    } else {
+      // Set a timeout to change the theme toggle image back to on after 500ms
+      setTimeout(function () {
+        root.style.setProperty('--color', '#000000');
+        root.style.setProperty('--color-background', '#F2F2F2');
+        root.style.setProperty('--color-text', '#000000');
+        root.style.setProperty('--color-button', '#888888');
+        root.style.setProperty('--color-transparent', 'rgba(0,0,0,0.3)');
+        root.style.setProperty(
+          '--color-button-text-transparent',
+          'rgba(256,256,256,0.7)'
+        );
+        themeToggleImage.src = 'images/lamp_on2.png';
+        profile.src = 'images/profpicb.png';
+        xdaicon.src = 'images/xda-muted-light.png';
+        codewarsicon.src = 'images/codewars-muted-light.png';
+        statcounterDigit.classList.remove('negative-image');
+        googledevicon.src = 'images/google-developers-muted-light.png';
+      }, 500);
+      themeToggleImage.src = 'images/lamp_on.png';
+      // Store the current theme in localStorage
+      localStorage.setItem('theme', 'light');
+    }
+  });
 
 // Get necessary elements by ID
 let tooltip = document.getElementById('tooltip');
 let themeToggleImage = document.getElementById('theme-toggle-img');
 
 // Add event listener to the theme toggle image when mouse enters
-themeToggleImage.addEventListener('mouseenter', function() {
+themeToggleImage.addEventListener('mouseenter', function () {
   // Show tooltip with animation
   tooltip.style.visibility = 'visible';
   tooltip.style.opacity = '1';
-  tooltip.style.transition = "all 0.25s ease-in";
+  tooltip.style.transition = 'all 0.25s ease-in';
   // Set a timeout to hide the tooltip after 2500ms
-  setTimeout(function() {
+  setTimeout(function () {
     tooltip.style.visibility = 'hidden';
     tooltip.style.opacity = '0';
     tooltip.style.transition = 'all 0.4s ease';
@@ -131,16 +142,16 @@ themeToggleImage.addEventListener('mouseenter', function() {
 });
 
 // Add event listener to the theme toggle image when mouse leaves
-themeToggleImage.addEventListener('mouseleave', function() {
+themeToggleImage.addEventListener('mouseleave', function () {
   // Set a timeout to hide the tooltip after 500ms
-  setTimeout(function() {
+  setTimeout(function () {
     tooltip.style.visibility = 'hidden';
     tooltip.style.opacity = '0';
   }, 500);
 });
 
 // Add event listener when the DOM content is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Get the stored theme from localStorage
   let theme = localStorage.getItem('theme');
   let root = document.documentElement;
@@ -152,55 +163,64 @@ document.addEventListener('DOMContentLoaded', function() {
   let statcounterDigit = document.getElementById('statcounter-digit');
   let contentId = localStorage.getItem('contentId');
   if (theme === 'dark') {
-      // Apply dark theme
-      root.style.setProperty('--color', '#F2F2F2');
-      root.style.setProperty('--color-background', '#000000');
-      root.style.setProperty('--color-text', '#F2F2F2');
-      root.style.setProperty('--color-button', '#a9a9a9');
-      root.style.setProperty('--color-transparent', 'rgba(256,256,256,0.3)');
-      root.style.setProperty('--color-button-text-transparent', 'rgba(0,0,0,0.7)');
-      themeToggleImage.src = "images/lamp_off.png";
-      profile.src = "images/profpicd.png";
-      xdaicon.src = "images/xda-muted.png";
-      codewarsicon.src = "images/codewars-muted.png";
-      googledevicon.src = "images/google-developers-muted.png"
-      statcounterDigit.classList.add('negative-image');
+    // Apply dark theme
+    root.style.setProperty('--color', '#F2F2F2');
+    root.style.setProperty('--color-background', '#000000');
+    root.style.setProperty('--color-text', '#F2F2F2');
+    root.style.setProperty('--color-button', '#a9a9a9');
+    root.style.setProperty('--color-transparent', 'rgba(256,256,256,0.3)');
+    root.style.setProperty(
+      '--color-button-text-transparent',
+      'rgba(0,0,0,0.7)'
+    );
+    themeToggleImage.src = 'images/lamp_off.png';
+    profile.src = 'images/profpicd.png';
+    xdaicon.src = 'images/xda-muted.png';
+    codewarsicon.src = 'images/codewars-muted.png';
+    googledevicon.src = 'images/google-developers-muted.png';
+    statcounterDigit.classList.add('negative-image');
   } else {
-      // Apply light theme (or default theme)
-      root.style.setProperty('--color', '#000000');
-      root.style.setProperty('--color-background', '#F2F2F2');
-      root.style.setProperty('--color-text', '#000000');
-      root.style.setProperty('--color-button', '#888888');
-      root.style.setProperty('--color-transparent', 'rgba(0,0,0,0.3)');
-      root.style.setProperty('--color-button-text-transparent', 'rgba(256,256,256,0.7)');
-      themeToggleImage.src = "images/lamp_on2.png";
-      profile.src = "images/profpicb.png";
-      xdaicon.src = "images/xda-muted-light.png";
-      codewarsicon.src = "images/codewars-muted-light.png";
-      googledevicon.src = "images/google-developers-muted-light.png"
-      statcounterDigit.classList.remove('negative-image');
+    // Apply light theme (or default theme)
+    root.style.setProperty('--color', '#000000');
+    root.style.setProperty('--color-background', '#F2F2F2');
+    root.style.setProperty('--color-text', '#000000');
+    root.style.setProperty('--color-button', '#888888');
+    root.style.setProperty('--color-transparent', 'rgba(0,0,0,0.3)');
+    root.style.setProperty(
+      '--color-button-text-transparent',
+      'rgba(256,256,256,0.7)'
+    );
+    themeToggleImage.src = 'images/lamp_on2.png';
+    profile.src = 'images/profpicb.png';
+    xdaicon.src = 'images/xda-muted-light.png';
+    codewarsicon.src = 'images/codewars-muted-light.png';
+    googledevicon.src = 'images/google-developers-muted-light.png';
+    statcounterDigit.classList.remove('negative-image');
   }
   // Call the showContent function with the stored contentId
   if (contentId) {
-      showContent(contentId);
+    showContent(contentId);
   }
 });
 
 // Create an IntersectionObserver to handle fading in of sections
-let observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = "1";
-    } else {
-      entry.target.style.opacity = "0";
-    }
-  });
-}, { threshold: 0 });
+let observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+      } else {
+        entry.target.style.opacity = '0';
+      }
+    });
+  },
+  { threshold: 0 }
+);
 
 // Apply the observer to all elements with class 'column'
-document.querySelectorAll('.column').forEach(section => {
-  section.style.opacity = "0";
-  section.style.transition = "opacity 0.73s ease";
+document.querySelectorAll('.column').forEach((section) => {
+  section.style.opacity = '0';
+  section.style.transition = 'opacity 0.73s ease';
   observer.observe(section);
 });
 
@@ -209,47 +229,47 @@ const xdaicon = document.getElementById('xda');
 const codewarsicon = document.getElementById('codewars');
 
 // Add event listener when mouse is over the googledev icon
-googledevicon.addEventListener('mouseover', function() {
-  googledevicon.src = "images/google-developers.png";
+googledevicon.addEventListener('mouseover', function () {
+  googledevicon.src = 'images/google-developers.png';
 });
 
 // Add event listener when mouse leaves the googledev icon
-googledevicon.addEventListener('mouseout', function() {
+googledevicon.addEventListener('mouseout', function () {
   const theme = localStorage.getItem('theme');
   if (theme === 'dark') {
-    googledevicon.src = "images/google-developers-muted.png";
+    googledevicon.src = 'images/google-developers-muted.png';
   } else {
-    googledevicon.src = "images/google-developers-muted-light.png";
+    googledevicon.src = 'images/google-developers-muted-light.png';
   }
 });
 
 // Add event listener when mouse is over the xda icon
-xdaicon.addEventListener('mouseover', function() {
-  xdaicon.src = "images/xda.png";
+xdaicon.addEventListener('mouseover', function () {
+  xdaicon.src = 'images/xda.png';
 });
 
 // Add event listener when mouse leaves the xda icon
-xdaicon.addEventListener('mouseout', function() {
+xdaicon.addEventListener('mouseout', function () {
   const theme = localStorage.getItem('theme');
   if (theme === 'dark') {
-    xdaicon.src = "images/xda-muted.png";
+    xdaicon.src = 'images/xda-muted.png';
   } else {
-    xdaicon.src = "images/xda-muted-light.png";
+    xdaicon.src = 'images/xda-muted-light.png';
   }
 });
 
 // Add event listener when mouse is over the codewars icon
-codewarsicon.addEventListener('mouseover', function() {
-  codewarsicon.src = "images/codewars.png";
+codewarsicon.addEventListener('mouseover', function () {
+  codewarsicon.src = 'images/codewars.png';
 });
 
 // Add event listener when mouse leaves the codewars icon
-codewarsicon.addEventListener('mouseout', function() {
+codewarsicon.addEventListener('mouseout', function () {
   const theme = localStorage.getItem('theme');
   if (theme === 'dark') {
-    codewarsicon.src = "images/codewars-muted.png";
+    codewarsicon.src = 'images/codewars-muted.png';
   } else {
-    codewarsicon.src = "images/codewars-muted-light.png";
+    codewarsicon.src = 'images/codewars-muted-light.png';
   }
 });
 
@@ -257,30 +277,30 @@ codewarsicon.addEventListener('mouseout', function() {
 window.addEventListener('resize', adjustColumnWidth);
 
 // Add event listener to all anchor elements with href starting with '#'
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+    e.preventDefault();
 
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-      });
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+    });
   });
 });
 
 // Get the modal element and other related elements
-let modal = document.getElementById("myModal");
-let btns = document.querySelectorAll(".project.button");
-let span = document.getElementsByClassName("close")[0];
-let projectLinkBtn = document.getElementById("project-link-btn");
-let repoLinkBtn = document.getElementById("repo-link-btn"); // New line
-let readmeContent = document.getElementById("readme-content");
+let modal = document.getElementById('myModal');
+let btns = document.querySelectorAll('.project.button');
+let span = document.getElementsByClassName('close')[0];
+let projectLinkBtn = document.getElementById('project-link-btn');
+let repoLinkBtn = document.getElementById('repo-link-btn'); // New line
+let readmeContent = document.getElementById('readme-content');
 
 // Add event listener to the document body to handle project button clicks
-document.body.addEventListener('click', function(e) {
+document.body.addEventListener('click', function (e) {
   // Find the closest ancestor element with class 'project.button'
-  const btn = e.target.closest(".project.button");
-  if(btn) {
-    modal.style.display = "block";
+  const btn = e.target.closest('.project.button');
+  if (btn) {
+    modal.style.display = 'block';
     projectLinkBtn.href = btn.dataset.projectLink;
     repoLinkBtn.href = btn.dataset.repoLink;
     // Extract the project name from the link
@@ -294,27 +314,27 @@ document.body.addEventListener('click', function(e) {
     fetchReadme(btn.dataset.projectLink);
 
     // Open the project link in a new window/tab when clicked
-    projectLinkBtn.onclick = function() {
+    projectLinkBtn.onclick = function () {
       window.open(this.href);
-    }
+    };
     // Open the repository link in a new window/tab when clicked
-    repoLinkBtn.onclick = function() {
+    repoLinkBtn.onclick = function () {
       window.open(this.href);
-    }
+    };
   }
 });
 
 // Add event listener to the close button in the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+span.onclick = function () {
+  modal.style.display = 'none';
+};
 
 // Add event listener to the window when clicked outside the modal
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    modal.style.display = 'none';
   }
-}
+};
 
 let converter = new showdown.Converter();
 
@@ -322,13 +342,13 @@ let converter = new showdown.Converter();
 function fetchReadme(projectLink) {
   let parts = projectLink.split('/');
   let projectName = parts[parts.length - 2];
-  let branch = projectName === "portfolio" ? "gh-pages" : "master";
+  let branch = projectName === 'portfolio' ? 'gh-pages' : 'master';
   let url = `https://raw.githubusercontent.com/EleoXDA/${projectName}/${branch}/README.md`;
 
   // Fetch the README content using the provided URL
   fetch(url)
-    .then(response => response.text())
-    .then(data => {
+    .then((response) => response.text())
+    .then((data) => {
       let html = converter.makeHtml(data); // This line converts markdown to HTML
       // Render the README content in the modal
       readmeContent.innerHTML = html;
@@ -336,11 +356,13 @@ function fetchReadme(projectLink) {
     .catch((error) => {
       console.error('Error:', error);
       // Display an error message if the README content cannot be fetched
-      readmeContent.innerHTML = "Error loading README";
+      readmeContent.innerHTML = 'Error loading README';
     });
 }
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 
 adjustColumnWidth();
 
@@ -379,7 +401,7 @@ let experienceContent = `<h2>Experience</h2>
 <div>
   <h3>MSc. Researcher/Project Responsible at Middle East Technical University</h3>
   <p>Involved in silicon chip manufacturing and MEMS for automated testing. Validated incoming data to check information accuracy and integrity while locating and correcting concerns. Published research and review papers in peer-reviewed scientific journals.</p>
-</div>`
+</div>`;
 
 let educationContent = `<h2>Education</h2>
 <div>
@@ -396,7 +418,7 @@ let educationContent = `<h2>Education</h2>
 <div>
   <h3>Bachelor of Science: Biology</h3>
   <p>Basics of scientific research - introduction to general scientific applications.</p>
-</div>`
+</div>`;
 
 let softContent = `<h2 id='softh2'>Software Proficiency</h2>
 <hr id='softhr'>
@@ -447,7 +469,7 @@ let softContent = `<h2 id='softh2'>Software Proficiency</h2>
   </div>
 </div>
 </div>
-</div>` 
+</div>`;
 
 let langContent = `<h2>Language Proficiency</h2>
 <p> - English (C2) 
@@ -455,7 +477,7 @@ let langContent = `<h2>Language Proficiency</h2>
   <br> - Azerbaijani (Native) 
   <br> - Russian (B2) 
   <br> - German (B1)
-</p>`
+</p>`;
 
 let projects = `<h2 style="margin-bottom: 0px;">Projects</h2>
 <h6 style="font-weight: 500; margin-top: 0px; margin-bottom: 20px;"><br>For more information on code, documentation and execution of each project, please <span style="text-decoration:underline;">click the button on the left side</span>.</h6>
@@ -521,7 +543,7 @@ let projects = `<h2 style="margin-bottom: 0px;">Projects</h2>
     <a target="_blank" href="https://github.com/EleoXDA/portfolio" style="text-decoration: underline;" class="hyperlink-in-projects">Link to Repo</a>
     <br>Tech Stack: HTML, CSS, Javascript, GitHub Actions, GitHub Pages, Web Hosting</h6>
     </div>
-</div>`
+</div>`;
 
 let skills = `<h2 id='softh2'>Skills and Tools</h2>
 <hr id='softhr'>
@@ -609,7 +631,7 @@ let skills = `<h2 id='softh2'>Skills and Tools</h2>
 </tbody>
 </table>
 <hr id='softhr'>
-</div>`
+</div>`;
 document.getElementById('projects').innerHTML = projects;
 document.getElementById('lang').innerHTML = langContent;
 document.getElementById('soft').innerHTML = softContent;
