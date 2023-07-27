@@ -472,15 +472,18 @@ let softContent = `<h2 id='softh2'>Software Proficiency</h2>
 </div>`;
 
 let langContent = `<h2>Language Proficiency</h2>
-<p> - English (C2) 
-  <br> - Turkish (Native) 
-  <br> - Azerbaijani (Native) 
-  <br> - Russian (B2) 
-  <br> - German (B1)
+<p> - English
+  <br> - German
+  <br> - Turkish
+  <br> - Azerbaijani
+  <br> - Russian
 </p>`;
 
 let projects = `<h2 style="margin-bottom: 0px;">Projects</h2>
-<h6 style="font-weight: 500; margin-top: 0px; margin-bottom: 20px;"><br>For more information on code, documentation and execution of each project, please <span style="text-decoration:underline;">click the button on the left side</span>.</h6>
+<div>
+<p>In the following list you will find some of the open source projects that I built. Unfortunately I cannot share the source of private projects that I worked on during my employment, or the projects that were presented during my freelance work time.</p>
+</div>
+<h6 style="font-weight: 500; margin-top: 0px; margin-bottom: 20px;"><br>For more information on code, documentation and execution of each project, please <span style="text-decoration:underline;">click the button on the left side</span> to open the ReadMe of the Github projects.</h6>
 <hr>
 <div class="project-container">
   <button class="project button" data-project-link="https://eleoxda.github.io/Ace_Hunter_JS/"><h3 class="project-name">Ace Hunter</h3></button>
